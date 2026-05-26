@@ -1,0 +1,4 @@
+//per creare un nuovo progetto con vite + react: npm create vite@latest nome-del-tuo-progetto -- --template react (o se voglio direttamente utilizzare javascript o typescript basta aggiungere accanto a react: -ts/-js)
+//per reinstallare node-modules: npm install
+
+La differenza più importante tra JavaScript e TypeScript è il sistema di gestione dei tipi: JavaScript usa una tipizzazione dinamica (controlla i tipi durante l'esecuzione), mentre TypeScript introduce una tipizzazione statica (controlla i tipi durante la scrittura e la compilazione del codice)

@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es2023",
-    "module": "esnext",
-    "lib": ["ES2023", "DOM"],
+    "target": "ES2023",
+    "module": "ESNext",
+
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+
     "types": ["vite/client"],
+
     "skipLibCheck": true,
 
     /* Bundler mode */
@@ -13,11 +16,21 @@
     "moduleDetection": "force",
     "noEmit": true,
 
+    /* React JSX */
+    "jsx": "react-jsx",
+
+    /* Interop */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    /* Strictness */
+    "strict": true,
+
     /* Linting */
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
+
   "include": ["src"]
 }
