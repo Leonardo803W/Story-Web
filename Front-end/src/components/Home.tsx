@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import imgPreistoria from "../img/card_img_lista_epoche/preistoria.jpg";
 import imgEtaAntica from "../img/card_img_lista_epoche/eta_antica.jpg";
 import imgMedioevo from "../img/card_img_lista_epoche/medioevo.webp";
