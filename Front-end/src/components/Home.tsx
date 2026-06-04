@@ -6,6 +6,10 @@ import imgEtaContemporanea from "../img/card_img_lista_epoche/eta_contemporanea.
 import imgBattaglie from "../img/battaglie.jpg";
 import imgArmi from "../img/armi.jpg";
 import imgTattiche from "../img/tattiche.jpg";
+import imgScienza from "../img/scienza.jpg";
+import imgReligione from "../img/religione.jpg";
+import imgInvenzioni from "../img/invenzioni.jpg";
+import imgMisteri from "../img/misteri.webp";
 
 const epoche = [
     {
@@ -80,20 +84,55 @@ const Home = () => {
           <div className="carousel">
             <div className="carousel-card">
               <img src={imgBattaglie} alt="Battaglie storiche" />
-              <h4>Battaglie storiche</h4>
+              <h3>Battaglie storiche</h3>
               <p>Scopri le battaglie che hanno cambiato il corso della storia.</p>
             </div>
 
             <div className="carousel-card">
               <img src={imgArmi} alt="Armi sviluppate" />
-              <h4>Armi sviluppate</h4>
+              <h3>Armi sviluppate</h3>
               <p>Guarda le armi che hanno cambiato le tattiche militari.</p>
             </div>
 
             <div className="carousel-card">
               <img src={imgTattiche} alt="Tattiche militari" />
-              <h4>Tattiche militari</h4>
+              <h3>Tattiche militari</h3>
               <p>In ogni epoca le tattiche si sono evolute, perche?</p>
+            </div>
+
+            <div className="carousel-card">
+              <img src={imgScienza} alt="Scienza" />
+              <h3>Scienza</h3>
+              <p>La scienza continua ad evolversi, ma tutto parte da una semplice curiosità.</p>
+            </div>
+
+            <div className="carousel-card">
+              <img src={imgReligione} alt="Religione" />
+              <h3>Religione</h3>
+              <p>nel corso della storia, vi sono state e vi sono tuttora una miriade di religioni, quante ne conosciamo?</p>
+            </div>
+          </div>
+        </section>
+
+        <section id = "continenti">
+            <h3 className = "text-center mb-2">I continenti</h3>
+            <p>Ogni continente ha le sue caratteristiche uniche e la storia non e la stessa per ogni continente, come si sono formati e quali storie hanno?</p>
+        </section>
+
+        <section className="discover-section">
+          <h3 className = "text-center mb-2">Meraviglie e curiosità</h3>
+
+          <div className="carousel">
+            <div className="carousel-card">
+              <img src={imgInvenzioni} alt="Invenzioni" />
+              <h3>Invenzioni</h3>
+              <p>Scopri le invenzioni che hanno influenzato la vita quotidiana.</p>
+            </div>
+
+            <div className="carousel-card">
+              <img src={imgMisteri} alt="Misteri storici" />
+              <h3>Misteri storici</h3>
+              <p>La storia non e sempre chiara, ci sono misteri per cui non avremo mai risposte e altri a cui non avremo mai certezze</p>
             </div>
           </div>
         </section>

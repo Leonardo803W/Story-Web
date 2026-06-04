@@ -82,11 +82,13 @@
 #earth{
     background-image: url('../img/earth.jpg');
     border-radius: 5rem 1rem 5rem 1rem;
+    box-shadow: 0 0 5px rgb(80 171 198);
 }
 
 #nature{
     background-image: url('../img/nature.jpg');
     border-radius: 1rem 5rem 1rem 5rem;
+    box-shadow: 0 0 5px 1px rgb(147 225 66);
 }
 
 .discover-section{
@@ -124,4 +126,11 @@
     object-fit: cover;
     display: block;
     border-radius: 1rem;
+}
+
+#continenti{
+    background-image: url('../img/continenti.jpg');
+    min-height: 45rem;
+    background-size: cover;
+    background-position: center;
 }
