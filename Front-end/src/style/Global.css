@@ -3,14 +3,22 @@ body{
 }
 
 h1, h2, h3, h4, h5, h6{
-    font-size: smaller;
+    font-size: medium;
     color: white;
     margin: 0.5rem;
     padding: 0.5rem;
 }
 
+h1, h2, h3 {
+    font-size: x-large;
+}
+
+h4, h5, h6{
+    font-size: medium;
+}
+
 p, button, a{
-    font-size: x-small;
+    font-size: small;
     color: white;
     margin: 0.5rem;
     padding: 0.5rem;

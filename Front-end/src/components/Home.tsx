@@ -10,8 +10,6 @@ import imgScienza from "../img/scienza.jpg";
 import imgReligione from "../img/religione.jpg";
 import imgInvenzioni from "../img/invenzioni.jpg";
 import imgMisteri from "../img/misteri.webp";
-import imgPeste from "../img/peste.webp";
-import imgPeste2 from "../img/peste-removebg-preview.png";
 
 const epoche = [
     {
@@ -55,28 +53,31 @@ const TimeLine = [
                 id: 1,
                 title: "Europa",
                 text:"In Europa è stato un periodo di grandi cambiamenti, caratterizzato da guerre, carestie e pestilenze, ma anche da importanti sviluppi culturali e artistici.",
-                img: imgPeste,
-                img2: imgPeste2,
+                
             },
             {
                 id: 2,
                 title: "Asia",
-                text: "L'asia visse un periodo d'oro, per esempio Cina sotto le dinastie Tang e Song furono perfezionati strumenti che cambiarono il mondo come la stampa a caratteri mobili, la polvere da sparo e la bussola magnetica."
+                text: "L'asia visse un periodo d'oro, per esempio Cina sotto le dinastie Tang e Song furono perfezionati strumenti che cambiarono il mondo come la stampa a caratteri mobili, la polvere da sparo e la bussola magnetica.",
+                
             },
             {
                 id: 3,
                 title: "Americhe",
-                text: "In America civilta' avanzate come i Maya, svilupparono complessi sistemi di scrittura, astronomia e architettura monumentale."
-            },
+                text: "In America civilta' avanzate come i Maya, svilupparono complessi sistemi di scrittura, astronomia e architettura monumentale.",    
+                
+              },
             {
                 id: 4,
                 title: "Africa",
-                text: "In Africa il nord divenne parte integrante del mondo islamico, influenzando profondamenti i commerci, nel mentre il sud Africa, nacquero e prosperarono gli imperi dell'oro."
+                text: "In Africa il nord divenne parte integrante del mondo islamico, influenzando profondamenti i commerci, nel mentre il sud Africa, nacquero e prosperarono gli imperi dell'oro.",
+                
             },
             {
                 id: 5,
                 title: "Oceania",
-                text: "In Oceania, a differenza degli altri continenti non vi furono grandi civilta, ma le popolazioni indigene svilupparono culture uniche e adattate ai loro ambienti e anche dimostrando straordinarie capacita' di navigazione."
+                text: "In Oceania, a differenza degli altri continenti non vi furono grandi civilta, ma le popolazioni indigene svilupparono culture uniche e adattate ai loro ambienti e anche dimostrando straordinarie capacita' di navigazione.",
+                
             },
         ]
     },
@@ -188,8 +189,8 @@ const Home = () => {
             <p>Ogni continente ha le sue caratteristiche uniche e la storia non e la stessa per ogni continente, come si sono formati e quali storie hanno?</p>
         </section>
 
-        <section className="discover-section">
-          <h3 className = "text-center mb-2">Meraviglie e curiosità</h3>
+        <section className="dicover-more">
+          <h3 className = "text-center mb-5">Meraviglie e curiosità</h3>
 
           <div className="carousel">
             <div className="carousel-card">
@@ -206,18 +207,24 @@ const Home = () => {
           </div>
         </section>
 
-        <section>
+        <section id = "timeline">
           <div className="timelineCarousel">
 
             {TimeLine.map((timeline) => (
               <div key={timeline.id} className="timelineSlide">
 
-                <h3>
+                <h3 className = "text-center">
                   Cosa succedeva nel mondo nel {timeline.title}?
                 </h3>
 
                 {timeline.content.map((item) => (
-                  <div key={item.id} className="carouselTimeLine-card">
+                  <div 
+                    key={item.id} className="carouselTimeLine-card"
+                    id={`${timeline.title}-${item.title}`
+                      .toLowerCase()
+                      .replace(/\s+/g, '-')
+                      .replace(/[^\w-]/g, '')}
+                  >
                     <h4>{item.title}</h4>
                     <p>{item.text}</p>
                   </div>
