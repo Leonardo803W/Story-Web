@@ -1,4 +1,61 @@
-/*css home for phone */
+/*css globalNavbar*/
+
+.globalNavbar{
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    background-color: black;
+    box-shadow: 0px 0px 14px 8px #757575;
+    display: flex;
+    align-items: center;
+}
+
+.buttonNavbar{
+    background-color: black;
+    border: none;
+    font-size: x-large;
+}
+
+.titleNavbar{
+    text-align: center;
+    width: 80%;
+}
+
+.mobile-menu{
+    position: absolute;
+    z-index: 5;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.mobile-menu-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0rem 2rem 1rem 2rem;
+    color: white;
+    font-size: larger;
+}
+
+.mobile-menu-item {
+    list-style: none;
+    margin: 1rem 0rem 1rem 0rem;
+    border-bottom: solid 1px grey;
+    padding: 0rem 0rem 2rem 0rem;
+    width: 95%;
+}
+
+.mobile-menu-item a{
+    font-size: larger;
+    text-decoration: none;
+}
+
+/*css main home for phone */
+
+.mainLayout{
+    margin-top: 3rem;
+}
 
 .home{
     background-image: url('../img/hero-ancient-civilizations-dxTNKrsaB4Cu25sqW7AF8N.webp');
@@ -31,21 +88,44 @@
     animation: neon 3s infinite;
 }
 
-@keyframes neon {
-    0% {
-        text-shadow: 0 0 5px #7eebd1;
-    }
-    50% {
-        text-shadow: 0 0 20px #7eebd1,
-                     0 0 40px #7eebd1;
-    }
-    100% {
-        text-shadow: 0 0 5px #7eebd1;
-    }
-}
-
 .home p{
     margin: 1rem;
+}
+
+.falseButton, 
+.falseButtonEarth, 
+.falseButtonNature, 
+.falseButtonContinenti {
+    text-align: center;
+    width: 50%;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    box-shadow: 0px 4px 22px -2px;
+}
+
+.falseButton{
+    border: solid 2px #b9b9b9;
+    color: #c3c3c3;
+    margin: 2rem auto 1rem auto;
+}
+
+.falseButtonEarth{
+    border: solid 2px #0e7099;
+    color: #2e9db2;
+    margin: 4rem 0rem 0rem 6rem;
+}
+
+.falseButtonNature{
+    border: solid 2px #4a822a;
+    color: #7baf48;
+    margin: 3rem 0rem 0rem 6rem;
+}
+
+.falseButtonContinenti{
+    border: solid 2px #b09a82;
+    width: 80%;
+    color: #d9b898;
+    margin: 2rem auto 0rem auto;
 }
 
 #le-epoche-storiche{
@@ -72,7 +152,7 @@
     background-size: cover;
     background-position: center;
     position: relative;
-    padding: 14rem 4rem 0rem 0rem;
+    padding: 10rem 4rem 0rem 0rem;
 }
 
 #earth:after, 
@@ -255,4 +335,25 @@
 
 #medioevo-oceania{
     background-image: url('../img/card_img_timeline/Oceania-medioevo.jpg');
+}
+
+/*aimazione main home per telefono*/
+
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 10px #7eebd1;
+    }
+    50% {
+        text-shadow: 0 0 40px #7eebd1;
+    }
+    100% {
+        text-shadow: 0 0 10px #7eebd1;
+    }
+}
+
+/*css globalFooter*/
+
+#footer{
+    text-align: center;
+    margin-top: 4rem;
 }

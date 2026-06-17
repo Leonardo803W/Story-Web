@@ -135,16 +135,20 @@ const Home = () => {
                     </div>
                 </div>
             ))}
+
+            <div className = "falseButton">Scopri di più</div>
         </section>
 
         <section>
           <article id = "earth">
               <h3>Earth</h3>
               <p>Sai come si e formata la terra e quali materiali la compongono? Scopri di più!</p>
+            <div className="falseButtonEarth">Scopri di più</div>
           </article>
           <article id = "nature">
             <h3>Nature</h3>
             <p>Ogni ambiente ha le sue caratteristiche uniche, perche'? Gli esseri viventi non possono vivere senza.</p>
+            <div className="falseButtonNature">Scopri di più</div>
           </article>
         </section>
 
@@ -182,11 +186,14 @@ const Home = () => {
               <p>nel corso della storia, vi sono state e vi sono tuttora una miriade di religioni, quante ne conosciamo?</p>
             </div>
           </div>
+
+          <div className = "falseButton">Scopri di più</div>
         </section>
 
         <section id = "continenti">
             <h3 className = "text-center mb-2">I continenti</h3>
             <p>Ogni continente ha le sue caratteristiche uniche e la storia non e la stessa per ogni continente, come si sono formati e quali storie hanno?</p>
+            <div className = "falseButtonContinenti">Scopri di più</div>
         </section>
 
         <section className="dicover-more">
@@ -205,6 +212,7 @@ const Home = () => {
               <p>La storia non e sempre chiara, ci sono misteri per cui non avremo mai risposte e altri a cui non avremo mai certezze</p>
             </div>
           </div>
+          <div className = "falseButton">Scopri di più</div>
         </section>
 
         <section id = "timeline">
@@ -234,6 +242,7 @@ const Home = () => {
             ))}
 
           </div>
+          <div className = "falseButton">Scopri di più</div>
         </section>
     </>
   );
