@@ -4,7 +4,7 @@ import { epoche } from "../data/epoche";
 const DettaglioEpoca = () => {
     const { epocaId, subItemId } = useParams();
 
-    const epoca = epoche[1].content2.find(
+    const epoca = epoche[1].content2!.find(
         (item) => item.id === Number(epocaId)
     );
 
