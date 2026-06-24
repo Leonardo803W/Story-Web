@@ -1,8 +1,5 @@
-import imgPreistoria from "../img/card_img_lista_epoche/preistoria.jpg";
-import imgEtaAntica from "../img/card_img_lista_epoche/eta_antica.jpg";
-import imgMedioevo from "../img/card_img_lista_epoche/medioevo.webp";
-import imgEtaModerna from "../img/card_img_lista_epoche/eta_moderna.jpg";
-import imgEtaContemporanea from "../img/card_img_lista_epoche/eta_contemporanea.jpg";
+import { Link } from "react-router-dom";
+
 import imgBattaglie from "../img/battaglie.jpg";
 import imgArmi from "../img/armi.jpg";
 import imgTattiche from "../img/tattiche.jpg";
@@ -11,108 +8,8 @@ import imgReligione from "../img/religione.jpg";
 import imgInvenzioni from "../img/invenzioni.jpg";
 import imgMisteri from "../img/misteri.webp";
 
-const epoche = [
-    {
-      id: 1,
-      title: "Preistoria",
-      text: "divisa in Paleolitico, Mesolitico e Neolitico",
-      img: imgPreistoria
-    },
-    {
-      id: 2,
-      title: "Eta Antica",
-      text: "Civilta antiche orientali, Civilta antiche occidentali e Roma",
-      img: imgEtaAntica
-    },
-    {
-      id: 3,
-      title: "Medioevo",
-      text: "divisa in Alto medievo e Basso medioevo",
-      img: imgMedioevo
-    },
-    {
-      id: 4,
-      title: "Eta Moderna",
-      text: "Rinascimento, eta delle scoperte geografiche e dell'assolutismo",
-      img: imgEtaModerna
-    },
-    {
-      id: 5,
-      title: "Eta Contemporanea",
-      text: "Eta delle rivoluzioni, XIX secolo, XX secolo e XXI secolo",
-      img: imgEtaContemporanea
-    }
-]
-
-const TimeLine = [
-    {
-        id: 1,
-        title: "Medioevo",
-        content: [
-            {
-                id: 1,
-                title: "Europa",
-                text:"In Europa è stato un periodo di grandi cambiamenti, caratterizzato da guerre, carestie e pestilenze, ma anche da importanti sviluppi culturali e artistici.",
-                
-            },
-            {
-                id: 2,
-                title: "Asia",
-                text: "L'asia visse un periodo d'oro, per esempio Cina sotto le dinastie Tang e Song furono perfezionati strumenti che cambiarono il mondo come la stampa a caratteri mobili, la polvere da sparo e la bussola magnetica.",
-                
-            },
-            {
-                id: 3,
-                title: "Americhe",
-                text: "In America civilta' avanzate come i Maya, svilupparono complessi sistemi di scrittura, astronomia e architettura monumentale.",    
-                
-              },
-            {
-                id: 4,
-                title: "Africa",
-                text: "In Africa il nord divenne parte integrante del mondo islamico, influenzando profondamenti i commerci, nel mentre il sud Africa, nacquero e prosperarono gli imperi dell'oro.",
-                
-            },
-            {
-                id: 5,
-                title: "Oceania",
-                text: "In Oceania, a differenza degli altri continenti non vi furono grandi civilta, ma le popolazioni indigene svilupparono culture uniche e adattate ai loro ambienti e anche dimostrando straordinarie capacita' di navigazione.",
-                
-            },
-        ]
-    },
-    {
-        id: 2,
-        title: "Medioevo",
-        content: [
-            {
-                id: 1,
-                title: "Europa",
-                text:"In Europa è stato un periodo di grandi cambiamenti, caratterizzato da guerre, carestie e pestilenze, ma anche da importanti sviluppi culturali e artistici."
-            },
-            {
-                id: 2,
-                title: "Asia",
-                text: "L'asia visse un periodo d'oro, per esempio Cina sotto le dinastie Tang e Song furono perfezionati strumenti che cambiarono il mondo come la stampa a caratteri mobili, la polvere da sparo e la bussola magnetica."
-            },
-            {
-                id: 3,
-                title: "Americhe",
-                text: "In America civilta' avanzate come i Maya, svilupparono complessi sistemi di scrittura, astronomia e architettura monumentale."
-            },
-            {
-                id: 4,
-                title: "Africa",
-                text: "In Africa il nord divenne parte integrante del mondo islamico, influenzando profondamenti i commerci, nel mentre il sud Africa, nacquero e prosperarono gli imperi dell'oro."
-            },
-            {
-                id: 5,
-                title: "Oceania",
-                text: "In Oceania, a differenza degli altri continenti non vi furono grandi civilta, ma le popolazioni indigene svilupparono culture uniche e adattate ai loro ambienti e anche dimostrando straordinarie capacita' di navigazione."
-            },
-        ]
-    },
-]
+import { epoche } from "../data/epoche";
+import { TimeLine } from "../data/Timeline";
 
 const Home = () => {
 
@@ -126,17 +23,21 @@ const Home = () => {
 
         <section>
           <h3 id = "le-epoche-storiche">Le Epoche Storiche</h3>
-            {epoche.map((epoca) => (
-                <div key={epoca.id} className="card_epoche">
-                  <img src={epoca.img} alt={epoca.title} />
+            {epoche[0]?.content1?.map((item) => (
+                <div key={item.id} className="card_epoche">
+                  <img src={item.img} alt={item.title} />
                     <div className = "card_epoche_text">
-                      <h5>{epoca.title}</h5>
-                      <p>{epoca.text}</p>
+                      <h5>{item.title}</h5>
+                      <p>{item.text}</p>
                     </div>
                 </div>
             ))}
 
-            <div className = "falseButton">Scopri di più</div>
+          <Link to="/epoche-storiche">
+            <div className = "falseButton">
+              Scopri di più
+            </div>
+          </Link>
         </section>
 
         <section>
@@ -187,7 +88,9 @@ const Home = () => {
             </div>
           </div>
 
-          <div className = "falseButton">Scopri di più</div>
+          <div className = "falseButton">
+            <Link to="/epoche-storiche">Scopri di più</Link>
+          </div>
         </section>
 
         <section id = "continenti">

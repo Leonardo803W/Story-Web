@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NAV_LINKS = [ 
     { to: "/", label: "Home" }, 
-    { to: "/EpocheStoriche", label: "Epoche storiche" }, 
+    { to: "/epoche-storiche", label: "Epoche storiche" }, 
     { to: "/IlLatoOscuro", label: "Il lato oscuro e ingegnoso dell'umanità" }, 
     { to: "/Terra", label: "Terra" }, 
     { to: "/Natura", label: "Natura" }, 
@@ -25,7 +25,9 @@ const GlobalNavbar = () => {
             <div className = "globalNavbar"> 
                 <button onClick = {toggleMenu} className = "buttonNavbar"> ☰ </button> 
                 
-                <h1 className = "titleNavbar">Story Web</h1>
+                <Link to="/" className = "w-75">
+                    <h1 className = "titleNavbar">Story Web</h1>
+                </Link>
             </div> 
             
             {/* Mobile menu */} 

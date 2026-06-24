@@ -8,6 +8,7 @@
     box-shadow: 0px 0px 14px 8px #757575;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 .buttonNavbar{
@@ -54,7 +55,7 @@
 /*css main home for phone */
 
 .mainLayout{
-    margin-top: 3rem;
+    margin-top: 6rem;
 }
 
 .home{
@@ -351,9 +352,91 @@
     }
 }
 
+/*css main Epoche for phone */
+
+#intro-epoche{
+    box-shadow: white 0px 0px 8px;
+    margin: 1rem 1rem 5rem 1rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+#card-preistoria,
+#card-eta-dei-metalli,
+#card-eta-antica,
+#card-medioevo,
+#card-eta-moderna,
+#card-eta-contemporanea{
+    min-height: 12rem;
+    padding: 4rem 0rem 0rem 0rem;
+    text-align: center;
+    margin: 1rem;
+    border-radius: 2rem;
+    background-size: cover;
+}
+
+
+#card-preistoria{
+    background-image: url('../img/card_img_lista_epoche/preistoria.jpg');
+}
+
+#card-eta-dei-metalli{
+    background-image: url('');
+}
+
+#card-eta-antica{
+    background-image: url('../img/card_img_lista_epoche/eta_antica.jpg');
+}
+
+#card-medioevo{
+    background-image: url('../img/card_img_lista_epoche/medioevo.webp');
+}
+
+#card-eta-moderna{
+    background-image: url('../img/card_img_lista_epoche/eta_moderna.jpg');
+}
+
+#card-eta-contemporanea{
+    background-image: url('../img/card_img_lista_epoche/eta_contemporanea.jpg');
+}
+
+.card_epoche_subitem_div{
+    background-color: #5b5b5ba8;
+    margin: 1rem;
+    width: 90%;
+    border-radius: 2rem;
+    padding: 0.5rem;
+}
+
+.button_epoche {
+    margin-left: 8rem;
+    background-color: #3e3e3e;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 2px white;
+}
+
+.intro_lista {
+    text-align: center;
+}
+
+.lista {
+    margin: 5rem 0rem 3rem 1rem;
+    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.group_links {
+    display: flex;
+    margin: 1rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 /*css globalFooter*/
 
 #footer{
     text-align: center;
     margin-top: 4rem;
+    width: 100%;
 }
