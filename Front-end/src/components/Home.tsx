@@ -1,15 +1,11 @@
 import { Link } from "react-router-dom";
 
-import imgBattaglie from "../img/battaglie.jpg";
-import imgArmi from "../img/armi.jpg";
-import imgTattiche from "../img/tattiche.jpg";
-import imgScienza from "../img/scienza.jpg";
-import imgReligione from "../img/religione.jpg";
 import imgInvenzioni from "../img/invenzioni.jpg";
 import imgMisteri from "../img/misteri.webp";
 
 import { epoche } from "../data/epoche";
 import { TimeLine } from "../data/Timeline";
+import { categorie } from "../data/categorie";
 
 const Home = () => {
 
@@ -55,41 +51,19 @@ const Home = () => {
 
         <section className="discover-section">
           <h3 className = "text-center mb-2">Il lato ingegnoso e crudo dell'umanità</h3>
-
+         
           <div className="carousel">
-            <div className="carousel-card">
-              <img src={imgBattaglie} alt="Battaglie storiche" />
-              <h3>Battaglie storiche</h3>
-              <p>Scopri le battaglie che hanno cambiato il corso della storia.</p>
-            </div>
-
-            <div className="carousel-card">
-              <img src={imgArmi} alt="Armi sviluppate" />
-              <h3>Armi sviluppate</h3>
-              <p>Guarda le armi che hanno cambiato le tattiche militari.</p>
-            </div>
-
-            <div className="carousel-card">
-              <img src={imgTattiche} alt="Tattiche militari" />
-              <h3>Tattiche militari</h3>
-              <p>In ogni epoca le tattiche si sono evolute, perche?</p>
-            </div>
-
-            <div className="carousel-card">
-              <img src={imgScienza} alt="Scienza" />
-              <h3>Scienza</h3>
-              <p>La scienza continua ad evolversi, ma tutto parte da una semplice curiosità.</p>
-            </div>
-
-            <div className="carousel-card">
-              <img src={imgReligione} alt="Religione" />
-              <h3>Religione</h3>
-              <p>nel corso della storia, vi sono state e vi sono tuttora una miriade di religioni, quante ne conosciamo?</p>
-            </div>
+            {categorie[0].content1?.map((item) => (
+              <div key = {item.id} className="carousel-card">
+                <img src = {item.img}></img>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            ))}
           </div>
 
           <div className = "falseButton">
-            <Link to="/epoche-storiche">Scopri di più</Link>
+            <Link to="/storie">Scopri di più</Link>
           </div>
         </section>
 
