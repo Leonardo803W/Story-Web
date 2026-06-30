@@ -40,12 +40,22 @@ const Home = () => {
           <article id = "earth">
               <h3>Earth</h3>
               <p>Sai come si e formata la terra e quali materiali la compongono? Scopri di più!</p>
-            <div className="falseButtonEarth">Scopri di più</div>
+            
+            <Link to="/Planets">
+              <div className = "falseButtonEarth">
+                Scopri di più
+              </div>
+            </Link>
           </article>
           <article id = "nature">
             <h3>Nature</h3>
             <p>Ogni ambiente ha le sue caratteristiche uniche, perche'? Gli esseri viventi non possono vivere senza.</p>
-            <div className="falseButtonNature">Scopri di più</div>
+            
+            <Link to="/Nature">
+              <div className = "falseButtonNature">
+                Scopri di più
+              </div>
+            </Link>
           </article>
         </section>
 
@@ -62,9 +72,11 @@ const Home = () => {
             ))}
           </div>
 
-          <div className = "falseButton">
-            <Link to="/storie">Scopri di più</Link>
-          </div>
+          <Link to="/storie">
+            <div className = "falseButton">
+              Scopri di più
+            </div>
+          </Link>
         </section>
 
         <section id = "continenti">
