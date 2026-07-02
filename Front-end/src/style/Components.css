@@ -299,43 +299,27 @@
 }
 
 .carouselTimeLine-card{
-    flex: 0 0 250px;
-    scroll-snap-align: start;
     position: relative;
-    border-radius: 1rem;
-    overflow: hidden;
-    margin: 2rem 0rem 2rem 0rem;
-}
-
-#medioevo-europa, 
-#medioevo-asia,
-#medioevo-americhe,
-#medioevo-africa,
-#medioevo-oceania{
     background-size: cover;
-    padding: 1rem 6rem 0rem 0rem;
-    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
     min-height: 14rem;
+    padding: 1rem 6rem 0 0;
+    position: relative;
+    margin: 2rem 0rem 2rem 0rem;
+    border-radius: 1rem;
 }
 
-#medioevo-europa{
-    background-image: url('../img/card_img_timeline/medioevo-europeo.webp');
+.carouselTimeLine-card::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #0000005c;
 }
 
-#medioevo-asia{
-    background-image: url('../img/card_img_timeline/asia-medioevo.jpg');
-}
-
-#medioevo-americhe{
-    background-image: url('../img/card_img_timeline/america\ medioevo.webp');
-}
-
-#medioevo-africa{
-    background-image: url('../img/card_img_timeline/africa-medioevo.jpg');
-}
-
-#medioevo-oceania{
-    background-image: url('../img/card_img_timeline/Oceania-medioevo.jpg');
+.carouselTimeLine-card > *{
+    position: relative;
+    z-index: 1;
 }
 
 /*aimazione main home per telefono*/

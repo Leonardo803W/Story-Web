@@ -7,6 +7,7 @@ import DettaglioEpoca from "./components/DettaglioEpoca";
 import Storie from "./components/Storie";
 import Planets from "./components/Planets";
 import Nature from "./components/Nature";
+import Continents from "./components/Continents";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path = "/storie" element = {<Storie />}/>
           <Route path = "/planets" element = {<Planets />}/>
           <Route path = "/Nature" element = {<Nature />}/>
+          <Route path = "/continents" element = {<Continents />} />
         </Route>
       </Routes>
     </BrowserRouter>

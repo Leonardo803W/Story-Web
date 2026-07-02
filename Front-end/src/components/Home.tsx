@@ -82,26 +82,39 @@ const Home = () => {
         <section id = "continenti">
             <h3 className = "text-center mb-2">I continenti</h3>
             <p>Ogni continente ha le sue caratteristiche uniche e la storia non e la stessa per ogni continente, come si sono formati e quali storie hanno?</p>
-            <div className = "falseButtonContinenti">Scopri di più</div>
+            
+            <Link to="/continents">
+              <div className = "falseButtonContinenti">
+                Scopri di più
+              </div>
+            </Link>
         </section>
 
         <section className="dicover-more">
           <h3 className = "text-center mb-5">Meraviglie e curiosità</h3>
 
           <div className="carousel">
-            <div className="carousel-card">
-              <img src={imgInvenzioni} alt="Invenzioni" />
-              <h3>Invenzioni</h3>
-              <p>Scopri le invenzioni che hanno influenzato la vita quotidiana.</p>
-            </div>
-
-            <div className="carousel-card">
-              <img src={imgMisteri} alt="Misteri storici" />
-              <h3>Misteri storici</h3>
-              <p>La storia non e sempre chiara, ci sono misteri per cui non avremo mai risposte e altri a cui non avremo mai certezze</p>
-            </div>
+            <article>
+                <h3>5.000 +</h3>
+                <p>Anni di storia</p>
+              </article>
+              <article>
+                <h3>1.000 +</h3>
+                <p>Civiltà Esplorate</p>
+              </article>
+              <article>
+                <h3>500 +</h3>
+                <p>Invenzioni Documentate</p>
+              </article>
+              <article>
+                <h3>200 +</h3>
+                <p>Battaglie Analizzate</p>
+              </article>
+              <article>
+                <h3>7.000 +</h3>
+                <p>lingue parlate e conosciute</p>
+              </article>
           </div>
-          <div className = "falseButton">Scopri di più</div>
         </section>
 
         <section id = "timeline">
@@ -116,11 +129,11 @@ const Home = () => {
 
                 {timeline.content.map((item) => (
                   <div 
-                    key={item.id} className="carouselTimeLine-card"
-                    id={`${timeline.title}-${item.title}`
-                      .toLowerCase()
-                      .replace(/\s+/g, '-')
-                      .replace(/[^\w-]/g, '')}
+                    key={item.id}
+                    className="carouselTimeLine-card"
+                    style={{
+                        backgroundImage: `url(${item.img})`
+                    }}
                   >
                     <h4>{item.title}</h4>
                     <p>{item.text}</p>
@@ -131,7 +144,6 @@ const Home = () => {
             ))}
 
           </div>
-          <div className = "falseButton">Scopri di più</div>
         </section>
     </>
   );
