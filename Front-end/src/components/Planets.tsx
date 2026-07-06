@@ -11,103 +11,387 @@ const Planets = () => {
                 </p>
             </section>
 
-            <div>
-                Elementi principali
-                
-                <div>
-                    Geosfera, la struttura interna ed esterna:
-                    
-                    <p>Crosta terrestre; strato superficiale in continuo movimento</p>
-                    <p>Mantello; strato intemredio</p>
-                    <p>Nucleo; parte centrale del pianeta</p>
-                </div>
-                <div>
-                    Idrosfera e Atmosfera
-                    
-                    <p>Idrosfera; insieme di oceani, fiumi, laghi e ghiacciai</p>
-                    <p>Atmosfera; il gas che avvolge la terra</p>
-                </div>
-                <div>
-                    Caratteristiche uniche
+            <section className="content_planets">
+                <h3>Struttura della Terra: Elementi principali</h3>
 
-                    <p>Biosfera; la vita</p>
-                    <p>Acqua liquida</p>
-                    <p>Campo magnetico; lo scudo invisibile</p>
+                <div className="article_planet">
+                    <h5>Geosfera, la struttura interna ed esterna:</h5>
+
+                    <article className="text_planets">
+                        <div id="crosta" className="text_planet_div">
+                            <p>Crosta terrestre; strato superficiale in continuo movimento</p>
+                        </div>
+
+                        <div id="mantello" className="text_planet_div">
+                            <p>Mantello; strato intermedio</p>
+                        </div>
+
+                        <div id="nucleo" className="text_planet_div">
+                            <p>Nucleo; parte centrale del pianeta</p>
+                        </div>
+                    </article>
                 </div>
 
-                <div>
-                    Satelliti naturali
+                <div className="article_planet">
+                    <h5>Idrosfera e Atmosfera:</h5>
 
-                    <p>Luna; genera le maree oceaniche e stabilizza l'asse di rotazione terrestre</p>
+                    <article className="text_planets">
+                        <div id="idrosfera" className="text_planet_div">
+                            <p>Idrosfera; insieme di oceani, fiumi, laghi e ghiacciai</p>
+                        </div>
+
+                        <div id="atmosfera" className="text_planet_div">
+                            <p>Atmosfera; il gas che avvolge la Terra</p>
+                        </div>
+                    </article>
                 </div>
-            </div>
 
-            <div>
+                <div className="article_planet">
+                    <h5>Caratteristiche uniche:</h5>
+
+                    <article className="text_planets">
+                        <div id="biosfera" className="text_planet_div">
+                            <p>Biosfera; la vita</p>
+                        </div>
+
+                        <div id="acqua-liquida" className="text_planet_div">
+                            <p>Acqua liquida</p>
+                        </div>
+
+                        <div id="campo-magnetico" className="text_planet_div">
+                            <p>Campo magnetico; lo scudo invisibile</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div className="article_planet">
+                    <h5>Satelliti naturali:</h5>
+
+                    <article className="text_planets">
+                        <div id="luna" className="text_planet_div">
+                            <p>Luna; genera le maree oceaniche e stabilizza l'asse di rotazione terrestre</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section className = "materiali_planets">
                 <h4>Elementi che compongono la Terra</h4>
 
                 <section>
-                    <h5>Elementi comuni</h5>
 
-                    <p>
-                        Circa il 99% della massa della Terra è costituita da pochi elementi
-                        chimici. Essi formano il nucleo, il mantello, la crosta terrestre,
-                        gli oceani e l'atmosfera, rendendo possibile l'esistenza del pianeta
-                        così come lo conosciamo oggi.
-                    </p>
+                    <div className = "intro_material_planet">
+                        <h5>Elementi comuni</h5>
 
-                    <ul>
-                        <li><span style={{ color:"#6E6E6E" }}>●</span> <strong>Ferro (Fe)</strong> — 32,1% — Costituisce principalmente il nucleo terrestre.</li>
-                        <li><span style={{ color:"#6EC6FF" }}>●</span> <strong>Ossigeno (O)</strong> — 30,1% — Presente nelle rocce, nell'acqua e nell'atmosfera.</li>
-                        <li><span style={{ color:"#C9C9C9" }}>●</span> <strong>Silicio (Si)</strong> — 15,1% — Insieme all'ossigeno forma la maggior parte delle rocce.</li>
-                        <li><span style={{ color:"#98FB98" }}>●</span> <strong>Magnesio (Mg)</strong> — 13,9% — Molto abbondante nel mantello terrestre.</li>
-                        <li><span style={{ color:"#FFD700" }}>●</span> <strong>Zolfo (S)</strong> — 2,9% — Presente nel nucleo e in numerosi minerali.</li>
-                        <li><span style={{ color:"#B0B0B0" }}>●</span> <strong>Nichel (Ni)</strong> — 1,8% — Accompagna il ferro nel nucleo terrestre.</li>
-                        <li><span style={{ color:"#F5F5DC" }}>●</span> <strong>Calcio (Ca)</strong> — 1,5% — Presente in rocce come il calcare.</li>
-                        <li><span style={{ color:"#C0C0C0" }}>●</span> <strong>Alluminio (Al)</strong> — 1,4% — Molto diffuso nella crosta terrestre.</li>
-                        <li><span style={{ color:"#A7C7E7" }}>●</span> <strong>Sodio (Na)</strong> — 0,3% — Comune negli oceani e in molti minerali.</li>
-                        <li><span style={{ color:"#7F7F7F" }}>●</span> <strong>Cromo (Cr)</strong> — 0,26% — Presente in piccole quantità nelle rocce.</li>
-                        <li><span style={{ color:"#C1440E" }}>●</span> <strong>Manganese (Mn)</strong> — 0,10% — Importante per la formazione di numerosi minerali.</li>
-                        <li><span style={{ color:"#FFA500" }}>●</span> <strong>Fosforo (P)</strong> — 0,09% — Essenziale per tutti gli esseri viventi.</li>
-                        <li><span style={{ color:"#DAA520" }}>●</span> <strong>Potassio (K)</strong> — 0,03% — Comune nei feldspati e in altri minerali.</li>
-                        <li><span style={{ color:"#A9A9A9" }}>●</span> <strong>Titanio (Ti)</strong> — 0,03% — Presente in minerali come il rutilo.</li>
-                        <li><span style={{ color:"#2F2F2F" }}>●</span> <strong>Carbonio (C)</strong> — 0,02% — Base della vita sulla Terra.</li>
-                        <li><span style={{ color:"#FFFFFF" }}>●</span> <strong>Idrogeno (H)</strong> — 0,02% — Componente fondamentale dell'acqua.</li>
+                        <p>
+                            Circa il 99% della massa della Terra è costituita da pochi elementi
+                            chimici. Essi formano il nucleo, il mantello, la crosta terrestre,
+                            gli oceani e l'atmosfera, rendendo possibile l'esistenza del pianeta
+                            così come lo conosciamo oggi.
+                        </p>
+                    </div>
+
+                    <ul className = "list_material_planet">
+                        <li id = "ferro" className = "single_material_planet">
+                            <div className = " d-flex justify-content-around">
+                                <span>Ferro (Fe)</span> 
+                                <strong>— 32,1% —</strong>  
+                            </div>
+                            <p>Costituisce principalmente il nucleo terrestre.</p>
+                        </li>
+                        
+                        <li id="ossigeno" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Ossigeno (O)</span>
+                                <strong>— 30,1% —</strong>
+                            </div>
+
+                            <p>Presente nelle rocce, nell'acqua e nell'atmosfera.</p>
+                        </li>
+
+                        <li id="silicio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Silicio (Si)</span>
+                                <strong>— 15,1% —</strong>
+                            </div>
+
+                            <p>Insieme all'ossigeno forma la maggior parte delle rocce.</p>
+                        </li>
+
+                        <li id="magnesio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Magnesio (Mg)</span>
+                                <strong>— 13,9% —</strong>
+                            </div>
+
+                            <p>Molto abbondante nel mantello terrestre.</p>
+                        </li>
+
+                        <li id="zolfo" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Zolfo (S)</span>
+                                <strong>— 2,9% —</strong>
+                            </div>
+
+                            <p>Presente nel nucleo e in numerosi minerali.</p>
+                        </li>
+
+                        <li id="nichel" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Nichel (Ni)</span>
+                                <strong>— 1,8% —</strong>
+                            </div>
+
+                            <p>Accompagna il ferro nel nucleo terrestre.</p>
+                        </li>
+
+                        <li id="calcio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Calcio (Ca)</span>
+                                <strong>— 1,5% —</strong>
+                            </div>
+
+                            <p>Presente in rocce come il calcare.</p>
+                        </li>
+
+                        <li id="alluminio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Alluminio (Al)</span>
+                                <strong>— 1,4% —</strong>
+                            </div>
+
+                            <p>Molto diffuso nella crosta terrestre.</p>
+                        </li>
+
+                        <li id="sodio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Sodio (Na)</span>
+                                <strong>— 0,3% —</strong>
+                            </div>
+
+                            <p>Comune negli oceani e in molti minerali.</p>
+                        </li>
+
+                        <li id="cromo" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Cromo (Cr)</span>
+                                <strong>— 0,26% —</strong>
+                            </div>
+
+                            <p>Presente in piccole quantità nelle rocce.</p>
+                        </li>
+
+                        <li id="manganese" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Manganese (Mn)</span>
+                                <strong>— 0,10% —</strong>
+                            </div>
+
+                            <p>Importante per la formazione di numerosi minerali.</p>
+                        </li>
+
+                        <li id="fosforo" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Fosforo (P)</span>
+                                <strong>— 0,09% —</strong>
+                            </div>
+
+                            <p>Essenziale per tutti gli esseri viventi.</p>
+                        </li>
+
+                        <li id="potassio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Potassio (K)</span>
+                                <strong>— 0,03% —</strong>
+                            </div>
+
+                            <p>Comune nei feldspati e in altri minerali.</p>
+                        </li>
+
+                        <li id="titanio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Titanio (Ti)</span>
+                                <strong>— 0,03% —</strong>
+                            </div>
+
+                            <p>Presente in minerali come il rutilo.</p>
+                        </li>
+
+                        <li id="carbonio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Carbonio (C)</span>
+                                <strong>— 0,02% —</strong>
+                            </div>
+
+                            <p>Base della vita sulla Terra.</p>
+                        </li>
+
+                        <li id="idrogeno" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Idrogeno (H)</span>
+                                <strong>— 0,02% —</strong>
+                            </div>
+
+                            <p>Componente fondamentale dell'acqua.</p>
+                        </li>
                     </ul>
                 </section>
 
                 <section>
-                    <h5>Elementi rari (Terre Rare)</h5>
 
-                    <p>
-                        Le terre rare sono un gruppo di 17 elementi chimici presenti in
-                        quantità molto ridotte rispetto agli elementi principali della Terra.
-                        Non sono sempre rare nella crosta terrestre, ma difficilmente si
-                        trovano concentrate in giacimenti sfruttabili economicamente.
-                        Oggi sono indispensabili per la produzione di smartphone, batterie,
-                        computer, satelliti, motori elettrici e turbine eoliche.
-                    </p>
+                    <div className = "intro_material_planet">
+                        <h5>Elementi rari (Terre Rare)</h5>
 
-                    <ul>
-                        <li><span style={{color:"#B8E986"}}>●</span> <strong>Scandio (Sc)</strong> — ~22 ppm</li>
-                        <li><span style={{color:"#A0CED9"}}>●</span> <strong>Ittrio (Y)</strong> — ~31 ppm</li>
-                        <li><span style={{color:"#F5DEB3"}}>●</span> <strong>Lantanio (La)</strong> — ~30 ppm</li>
-                        <li><span style={{color:"#FFD54F"}}>●</span> <strong>Cerio (Ce)</strong> — ~66 ppm</li>
-                        <li><span style={{color:"#E6E6FA"}}>●</span> <strong>Praseodimio (Pr)</strong> — ~9 ppm</li>
-                        <li><span style={{color:"#B39DDB"}}>●</span> <strong>Neodimio (Nd)</strong> — ~28 ppm</li>
-                        <li><span style={{color:"#D32F2F"}}>●</span> <strong>Promezio (Pm)</strong> — Estremamente raro e radioattivo.</li>
-                        <li><span style={{color:"#90CAF9"}}>●</span> <strong>Samario (Sm)</strong> — ~6 ppm</li>
-                        <li><span style={{color:"#4FC3F7"}}>●</span> <strong>Europio (Eu)</strong> — ~2 ppm</li>
-                        <li><span style={{color:"#81C784"}}>●</span> <strong>Gadolinio (Gd)</strong> — ~5 ppm</li>
-                        <li><span style={{color:"#FFAB91"}}>●</span> <strong>Terbio (Tb)</strong> — ~1 ppm</li>
-                        <li><span style={{color:"#CE93D8"}}>●</span> <strong>Disprosio (Dy)</strong> — ~5 ppm</li>
-                        <li><span style={{color:"#BCAAA4"}}>●</span> <strong>Olmio (Ho)</strong> — ~1 ppm</li>
-                        <li><span style={{color:"#80CBC4"}}>●</span> <strong>Erbio (Er)</strong> — ~3 ppm</li>
-                        <li><span style={{color:"#C5E1A5"}}>●</span> <strong>Tulio (Tm)</strong> — ~0,5 ppm</li>
-                        <li><span style={{color:"#FFE082"}}>●</span> <strong>Itterbio (Yb)</strong> — ~3 ppm</li>
-                        <li><span style={{color:"#BDBDBD"}}>●</span> <strong>Lutezio (Lu)</strong> — ~0,8 ppm</li>
+                        <p>
+                            Le terre rare sono un gruppo di 17 elementi chimici presenti in
+                            quantità molto ridotte rispetto agli elementi principali della Terra.
+                            Non sono sempre rare nella crosta terrestre, ma difficilmente si
+                            trovano concentrate in giacimenti sfruttabili economicamente.
+                            Oggi sono indispensabili per la produzione di smartphone, batterie,
+                            computer, satelliti, motori elettrici e turbine eoliche.
+                        </p>
+                    </div>
+
+                    <ul className = "list_material_planet">
+
+                        <li id="scandio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Scandio (Sc)</span>
+                                <strong>— ~22 ppm —</strong>
+                            </div>
+                            <p>Utilizzato in leghe aerospaziali e lampade ad alta intensità.</p>
+                        </li>
+
+                        <li id="ittrio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Ittrio (Y)</span>
+                                <strong>— ~31 ppm —</strong>
+                            </div>
+                            <p>Impiegato nei LED, nei laser e nei superconduttori.</p>
+                        </li>
+
+                        <li id="lantanio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Lantanio (La)</span>
+                                <strong>— ~30 ppm —</strong>
+                            </div>
+                            <p>Utilizzato nelle batterie ricaricabili e nelle lenti ottiche.</p>
+                        </li>
+
+                        <li id="cerio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Cerio (Ce)</span>
+                                <strong>— ~66 ppm —</strong>
+                            </div>
+                            <p>Usato per lucidare il vetro e nei catalizzatori.</p>
+                        </li>
+
+                        <li id="praseodimio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Praseodimio (Pr)</span>
+                                <strong>— ~9 ppm —</strong>
+                            </div>
+                            <p>Impiegato nei magneti permanenti e nel vetro speciale.</p>
+                        </li>
+
+                        <li id="neodimio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Neodimio (Nd)</span>
+                                <strong>— ~28 ppm —</strong>
+                            </div>
+                            <p>Fondamentale per magneti ad alte prestazioni, motori elettrici e hard disk.</p>
+                        </li>
+
+                        <li id="promezio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Promezio (Pm)</span>
+                                <strong>— Radioattivo —</strong>
+                            </div>
+                            <p>Elemento estremamente raro, impiegato nella ricerca scientifica.</p>
+                        </li>
+
+                        <li id="samario" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Samario (Sm)</span>
+                                <strong>— ~6 ppm —</strong>
+                            </div>
+                            <p>Usato nei magneti permanenti e nei reattori nucleari.</p>
+                        </li>
+
+                        <li id="europio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Europio (Eu)</span>
+                                <strong>— ~2 ppm —</strong>
+                            </div>
+                            <p>Responsabile dei colori rosso e blu nei display e nei LED.</p>
+                        </li>
+
+                        <li id="gadolinio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Gadolinio (Gd)</span>
+                                <strong>— ~5 ppm —</strong>
+                            </div>
+                            <p>Utilizzato nei mezzi di contrasto per la risonanza magnetica.</p>
+                        </li>
+
+                        <li id="terbio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Terbio (Tb)</span>
+                                <strong>— ~1 ppm —</strong>
+                            </div>
+                            <p>Impiegato nei fosfori verdi per schermi e lampade.</p>
+                        </li>
+
+                        <li id="disprosio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Disprosio (Dy)</span>
+                                <strong>— ~5 ppm —</strong>
+                            </div>
+                            <p>Migliora la resistenza al calore dei magneti permanenti.</p>
+                        </li>
+
+                        <li id="olmio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Olmio (Ho)</span>
+                                <strong>— ~1 ppm —</strong>
+                            </div>
+                            <p>Utilizzato nei laser e nei magneti speciali.</p>
+                        </li>
+
+                        <li id="erbio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Erbio (Er)</span>
+                                <strong>— ~3 ppm —</strong>
+                            </div>
+                            <p>Essenziale per gli amplificatori delle fibre ottiche.</p>
+                        </li>
+
+                        <li id="tulio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Tulio (Tm)</span>
+                                <strong>— ~0,5 ppm —</strong>
+                            </div>
+                            <p>Impiegato nei laser medicali e nelle apparecchiature a raggi X.</p>
+                        </li>
+
+                        <li id="itterbio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Itterbio (Yb)</span>
+                                <strong>— ~3 ppm —</strong>
+                            </div>
+                            <p>Utilizzato nei laser industriali e negli orologi atomici.</p>
+                        </li>
+
+                        <li id="lutezio" className="single_material_planet">
+                            <div className="d-flex justify-content-around">
+                                <span>Lutezio (Lu)</span>
+                                <strong>— ~0,8 ppm —</strong>
+                            </div>
+                            <p>Impiegato nella medicina nucleare e nei catalizzatori.</p>
+                        </li>
                     </ul>
                 </section>
-            </div>
+            </section>
 
             <div>
                 Il processo di formazione della terra

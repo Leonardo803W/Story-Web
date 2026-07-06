@@ -18,18 +18,18 @@ const DettaglioEpoca = () => {
 
     return (
         <section>
-            <div className = "intro_lista">
+            <div className = "intro_dettaglio_epoca">
                 <h1>{dettaglio.title}</h1>
                 <p>{dettaglio.text}</p>
             </div>
 
             <article className = "lista">
-                <div>
+                <div className="div_eventi">
                     <h3>Eventi principali:</h3>
                     <p>{dettaglio.event}</p>
                 </div>
 
-                <div>
+                <div className="div_invenzioni">
                     <h3>Invenzioni:</h3>
                     <p>{dettaglio.invenzioni}</p>
                 </div>

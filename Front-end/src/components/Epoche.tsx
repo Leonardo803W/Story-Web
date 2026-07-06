@@ -1,12 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { epoche } from "../data/epoche";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Epoche = () => {
 
+    const { id } = useParams();
+
     const [openCards, setOpenCards] = useState<number[]>([]);
 
+    useEffect(() => {
+    if (!id) return;
+
+    setOpenCards([Number(id)]);
+
+        setTimeout(() => {
+            const card = document.getElementById(
+                `card-${epoche[1].content2
+                    ?.find(item => item.id === Number(id))
+                    ?.title.toLowerCase()
+                    .replace(/\s+/g, "-")}`
+            );
+
+            card?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }, 0);
+    }, [id]);
+
     const toggleCard = (id: number) => {
+        
         setOpenCards((prev) =>
             prev.includes(id)
                 ? prev.filter((cardId) => cardId !== id)
@@ -17,7 +41,6 @@ const Epoche = () => {
     return(
         <>
             <h1 className = "text-center">Epoche Storiche</h1>
-            <hr className = "text-light"/>
             
             <article id = "intro-epoche">        
                 <p>
@@ -51,7 +74,8 @@ const Epoche = () => {
                     <div key={item.id}>
                         <div 
                             id={`card-${item.title}`.toLowerCase().replace(/\s+/g, '-')}
-                            onClick={() => toggleCard(item.id)}
+                            className = {openCards.includes(item.id) ? "macro_epoche_card_active" : "macro_epoche_card"}
+                            onClick={() => toggleCard(item.id, 'macro_epoca')}
                         >
                             <h3>{item.title}</h3>
                         </div>
@@ -62,6 +86,7 @@ const Epoche = () => {
                                     <div
                                         key={subItem.id}
                                         className="card_epoche_subitem_div"
+                                        onClick={() => toggleCard(subItem.id, 'subitem')}
                                     >
                                         <h4>{subItem.title}</h4>
                                         <p>{subItem.text}</p>

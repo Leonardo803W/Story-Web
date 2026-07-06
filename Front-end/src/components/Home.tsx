@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
 
-import imgInvenzioni from "../img/invenzioni.jpg";
-import imgMisteri from "../img/misteri.webp";
-
 import { epoche } from "../data/epoche";
 import { TimeLine } from "../data/Timeline";
 import { categorie } from "../data/categorie";
@@ -20,13 +17,18 @@ const Home = () => {
         <section>
           <h3 id = "le-epoche-storiche">Le Epoche Storiche</h3>
             {epoche[0]?.content1?.map((item) => (
-                <div key={item.id} className="card_epoche">
-                  <img src={item.img} alt={item.title} />
-                    <div className = "card_epoche_text">
-                      <h5>{item.title}</h5>
-                      <p>{item.text}</p>
-                    </div>
-                </div>
+                <Link 
+                  to={`/epoche-storiche/${item.id}`}
+                  key={item.id}
+                >
+                  <div className="card_epoche">
+                      <img src={item.img} alt={item.title} />
+                      <div className="card_epoche_text">
+                          <h5>{item.title}</h5>
+                          <p>{item.text}</p>
+                      </div>
+                  </div>
+              </Link>
             ))}
 
           <Link to="/epoche-storiche">

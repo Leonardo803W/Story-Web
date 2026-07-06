@@ -338,34 +338,38 @@
 
 /*css main Epoche for phone */
 
-#intro-epoche{
-    box-shadow: white 0px 0px 8px;
-    margin: 1rem 1rem 5rem 1rem;
-    border-radius: 2rem;
+#intro-epoche {
+    box-shadow: white 0px -10px 11px -9px;
+    margin: 1rem 0rem 5rem 0rem;
+    border-radius: 3rem 3rem 0rem 0rem;
     text-align: center;
 }
 
-#card-preistoria,
-#card-eta-dei-metalli,
-#card-eta-antica,
-#card-medioevo,
-#card-eta-moderna,
-#card-eta-contemporanea{
-    min-height: 12rem;
-    padding: 4rem 0rem 0rem 0rem;
+.macro_epoche_card, .macro_epoche_card_active{
     text-align: center;
     margin: 1rem;
     border-radius: 2rem;
     background-size: cover;
 }
 
+.macro_epoche_card{
+    min-height: 5rem;
+    padding: 1rem 0rem 0rem 0rem;
+    animation: reduce 0.5s ease-in-out;
+}
+
+.macro_epoche_card_active{
+    min-height: 12rem;
+    padding: 4rem 0rem 0rem 0rem;
+    animation: expand 0.5s ease-in-out;
+}
 
 #card-preistoria{
     background-image: url('../img/card_img_lista_epoche/preistoria.jpg');
 }
 
 #card-eta-dei-metalli{
-    background-image: url('');
+    background-image: url('../img/card_img_lista_epoche/età_dei_metalli.jpg');
 }
 
 #card-eta-antica{
@@ -390,6 +394,8 @@
     width: 90%;
     border-radius: 2rem;
     padding: 0.5rem;
+    opacity: 0.9;
+    animation: subItem_epoche 2s ease-in-out;
 }
 
 .button_epoche {
@@ -399,22 +405,94 @@
     box-shadow: 0px 0px 2px white;
 }
 
-.intro_lista {
-    text-align: center;
+/*animazioni*/
+
+@keyframes expand {
+    0% {
+        min-height: 5rem;
+        padding: 1rem 0rem 0rem 0rem;
+    }
+    100% {
+        min-height: 12rem;
+        padding: 4rem 0rem 0rem 0rem;
+    }
 }
 
-.lista {
-    margin: 5rem 0rem 3rem 1rem;
-    gap: 3rem;
+@keyframes reduce {
+    0% {
+        min-height: 12rem;
+        padding: 4rem 0rem 0rem 0rem;
+    }
+    100% {
+        min-height: 5rem;
+        padding: 1rem 0rem 0rem 0rem;
+    }
+}
+
+@keyframes subItem_epoche {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*css main dettaglioDettaglioEpoca for phone */
+
+.intro_dettaglio_epoca {
+    text-align: center;
+    margin: 7rem 2rem 4rem 2rem;
+    gap: 1rem;
     display: flex;
     flex-direction: column;
 }
 
+.lista{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.div_eventi::after,
+.div_invenzioni::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgb(0 0 0 / 1%) 1%, rgb(34 34 34 / 29%) 24%);
+}
+
+.div_eventi > *,
+.div_invenzioni > *{
+    position: relative;
+    z-index: 1;
+}
+
+.div_eventi, .div_invenzioni{
+    position: relative;
+    background-size: cover;
+    width: 85%;
+    box-shadow: 0px 0px 3px white;
+    padding: 0.5rem;
+    min-height: 10rem;
+}
+
+.div_eventi {
+    background-image: url('../img/eventi.webp');
+    border-radius: 0rem 3rem 3rem 0rem;
+}
+
+.div_invenzioni {
+    background-image: url('../img/invenzioni.webp');
+    border-radius: 3rem 0rem 0rem 3rem;
+    margin-left: auto;
+}
+
 .group_links {
     display: flex;
-    margin: 1rem;
+    align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap;
+    margin-top: 5rem;
 }
 
 /*css main Planets for phone */
@@ -442,6 +520,251 @@
 #intro_planets > *{
     position: relative;
     z-index: 1;
+}
+
+.content_planets {
+    margin: 4rem 0rem 1rem 0rem;
+    text-align: center;
+}
+
+.article_planet {
+    border: 1px solid #515151;
+    width: 80%;
+    border-radius: 2rem;
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 3rem;
+}
+
+.text_planets {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text_planet_div{
+    position: relative;
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+    background-size: cover;
+    background-position-y: -1rem;
+    min-height: 8rem;
+}
+
+.text_planet_div::after{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    background: linear-gradient(0deg, rgb(0 0 0 / 70%) 18%, rgb(34 34 34 / 24%) 76%);
+}
+
+.text_planet_div > *{
+    position: relative;
+    z-index: 3;
+}
+
+#crosta{
+    background-image: url('../img/planet/crosta_terrestre.jpg');
+}
+
+#mantello{
+    background-image: url('../img/planet/mantello_terrestre.webp');
+}
+
+#nucleo{
+    background-image: url('../img/planet/nucleo_terrestre.webp');
+}
+
+#idrosfera{
+    background-image: url('../img/planet/idrosfera.jpg');
+}
+
+#atmosfera{
+    background-image: url('../img/planet/atmosfera.webp');
+}
+
+#biosfera{
+    background-image: url('../img/planet/biosfera.jpeg');
+}
+
+#acqua-liquida{
+    background-image: url('../img/planet/acqua.webp');
+}
+
+#campo-magnetico{
+    background-image: url('../img/planet/campo_magnetico.jpg');
+}
+
+#luna{
+    background-image: url('../img/planet/satellite-terrestre.webp');
+}
+
+.materiali_planets {
+    margin: 4rem 1rem 1rem 1rem;
+    text-align: center;
+}
+
+.intro_material_planet {
+    margin: 3rem 0rem 4rem 0rem;
+    box-shadow: 0px 0px 9px 1px white;
+    border-radius: 2rem;
+}
+
+.list_material_planet{
+    list-style: none;
+    padding: 0;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.single_material_planet {
+    min-height: 4rem;
+    padding: 1rem 0rem 1rem 0rem;
+    border-radius: 1rem;
+}
+
+.single_material_planet p {
+    border-top: 1px solid black;
+    width: 100%;
+}
+
+/* Elementi comuni */
+
+#ferro{
+    background:#6e6e6e86;
+}
+
+#ossigeno{
+    background:#6ec5ff67;
+}
+
+#silicio{
+    background:#c9c9c96b;
+}
+
+#magnesio{
+    background:#98fb9856;
+}
+
+#zolfo{
+    background:#ffd90062;
+}
+
+#nichel{
+    background:#b0b0b049;
+}
+
+#calcio{
+    background:#f5f5dc36;
+}
+
+#alluminio{
+    background:#c0c0c056;
+}
+
+#sodio{
+    background:#a7c7e771;
+}
+
+#cromo{
+    background:#7f7f7f73;
+}
+
+#manganese{
+    background:#c1440e63;
+}
+
+#fosforo{
+    background:#ffa60046;
+}
+
+#potassio{
+    background:#daa52041;
+}
+
+#titanio{
+    background:#a9a9a93f;
+}
+
+#carbonio{
+    background:#2f2f2f42;
+}
+
+#idrogeno{
+    background:#ffffff60;
+}
+
+/* Terre Rare */
+
+#scandio{
+    background:#b8e9864b;
+}
+
+#ittrio{
+    background:#a0ced956;
+}
+
+#lantanio{
+    background:#f5deb34b;
+}
+
+#cerio{
+    background:#ffd64f59;
+}
+
+#praseodimio{
+    background:#e6e6fa46;
+}
+
+#neodimio{
+    background:#b39ddb3f;
+}
+
+#promezio{
+    background:#d32f2f4b;
+}
+
+#samario{
+    background:#90caf950;
+}
+
+#europio{
+    background:#4fc2f752;
+}
+
+#gadolinio{
+    background:#81c78441;
+}
+
+#terbio{
+    background:#ffab914b;
+}
+
+#disprosio{
+    background:#ce93d83b;
+}
+
+#olmio{
+    background:#bcaaa457;
+}
+
+#erbio{
+    background:#80cbc354;
+}
+
+#tulio{
+    background:#c5e1a550;
+}
+
+#itterbio{
+    background:#ffe0823f;
+}
+
+#lutezio{
+    background:#bdbdbd4d;
 }
 
 /*css globalFooter*/

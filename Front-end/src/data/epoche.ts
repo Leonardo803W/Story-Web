@@ -3,6 +3,7 @@ import imgEtaAntica from "../img/card_img_lista_epoche/eta_antica.jpg";
 import imgMedioevo from "../img/card_img_lista_epoche/medioevo.webp";
 import imgEtaModerna from "../img/card_img_lista_epoche/eta_moderna.jpg";
 import imgEtaContemporanea from "../img/card_img_lista_epoche/eta_contemporanea.jpg";
+import imgEtaMetalli from "../img/card_img_lista_epoche/età_dei_metalli.jpg";
 
 export const epoche = [
 
@@ -17,25 +18,31 @@ export const epoche = [
         img: imgPreistoria
       },
       {
-        id: 2,
+        id: 4,
+        title: "Eta dei metalli",
+        text: "divisa in Eta del rame, Eta del bronzo e Eta del ferro",
+        img: imgEtaMetalli
+      },
+      {
+        id: 3,
         title: "Eta Antica",
         text: "Civilta antiche orientali, Civilta antiche occidentali e Roma",
         img: imgEtaAntica
       },
       {
-        id: 3,
+        id: 4,
         title: "Medioevo",
         text: "divisa in Alto medievo e Basso medioevo",
         img: imgMedioevo
       },
       {
-        id: 4,
+        id: 5,
         title: "Eta Moderna",
         text: "Rinascimento, eta delle scoperte geografiche e dell'assolutismo",
         img: imgEtaModerna
       },
       {
-        id: 5,
+        id: 6,
         title: "Eta Contemporanea",
         text: "Eta delle rivoluzioni, XIX secolo, XX secolo e XXI secolo",
         img: imgEtaContemporanea
