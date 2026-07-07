@@ -1,3 +1,8 @@
+import { uniqueEnvironments } from "../data/enviroment_nature";
+import { livingOrganisms } from "../data/living_organism";
+import { endangeredAnimals } from "../data/living_organism_risk";
+import { naturalDisasters } from "../data/nature_disaster";
+
 const Nature = () => {
 
     return(
@@ -11,69 +16,33 @@ const Nature = () => {
                     sulla Terra. Ogni ecosistema è collegato agli altri e anche
                     eventi molto lontani possono influenzarsi reciprocamente.
                 </p>
-            </section>
-
-            <div>
-                <h4>Ambienti unici della Terra</h4>
 
                 <p>
-                    La Terra ospita ecosistemi estremamente diversi tra loro.
+                    Inoltre ospita ecosistemi estremamente diversi tra loro.
                     Sebbene possano sembrare indipendenti, molti sono collegati
                     attraverso il clima, le correnti oceaniche e l'atmosfera.
                 </p>
+            </section>
+
+            <section id="ambienti_unici">
+                <h4>Ambienti unici della Terra</h4>
 
                 <div>
-                    <h5>Foresta Amazzonica</h5>
+                    {uniqueEnvironments.map((environment) => (
+                        <article
+                            key={environment.id}
+                            id={environment.articleId}
+                            className = "environment_article"
+                        >
+                            <h5>{environment.title}</h5>
 
-                    <p>
-                        La più grande foresta pluviale del pianeta.
-                        Produce enormi quantità di umidità che influenzano
-                        il clima del Sud America e contribuisce ad assorbire
-                        grandi quantità di anidride carbonica.
-                    </p>
+                            <p>{environment.description}</p>
+                        </article>
+                    ))}
                 </div>
+            </section>
 
-                <div>
-                    <h5>Deserto del Sahara</h5>
-
-                    <p>
-                        Il deserto caldo più esteso del mondo.
-                        La sua sabbia, trasportata dal vento fino
-                        all'Amazzonia, fornisce fosforo e minerali
-                        indispensabili per la crescita della foresta.
-                    </p>
-                </div>
-
-                <div>
-                    <h5>Barriera Corallina</h5>
-
-                    <p>
-                        Uno degli ecosistemi marini più ricchi di biodiversità,
-                        fondamentale per migliaia di specie acquatiche.
-                    </p>
-                </div>
-
-                <div>
-                    <h5>Calotte Polari</h5>
-
-                    <p>
-                        Regolano la temperatura del pianeta riflettendo una
-                        parte della radiazione solare e influenzano le correnti
-                        oceaniche.
-                    </p>
-                </div>
-
-                <div>
-                    <h5>Foreste Boreali</h5>
-
-                    <p>
-                        Ricoprono gran parte dell'emisfero nord e rappresentano
-                        uno dei maggiori serbatoi naturali di carbonio.
-                    </p>
-                </div>
-            </div>
-
-            <div>
+            <section id="catastrofi_naturali">
                 <h4>Catastrofi naturali</h4>
 
                 <p>
@@ -83,23 +52,22 @@ const Nature = () => {
                     possono essere aggravate dai cambiamenti climatici.
                 </p>
 
-                <ul>
-                    <li>🌋 Eruzioni vulcaniche</li>
-                    <li>🌍 Terremoti</li>
-                    <li>🌊 Tsunami</li>
-                    <li>🌪 Tornado</li>
-                    <li>🌀 Uragani e Cicloni</li>
-                    <li>🌧 Alluvioni</li>
-                    <li>🔥 Incendi boschivi</li>
-                    <li>🏜 Siccità</li>
-                    <li>⛰ Frane</li>
-                    <li>🧊 Valanghe</li>
-                    <li>❄ Ondate di gelo</li>
-                    <li>☀ Ondate di calore</li>
-                </ul>
-            </div>
+                <div>
+                    {naturalDisasters.map((disaster) => (
+                        <article 
+                            key={disaster.id} 
+                            id={disaster.id}
+                            className = "natural_disaster"
+                        >
+                            <h3>{disaster.name}</h3>
 
-            <div>
+                            <p>{disaster.description}</p>
+                        </article>
+                    ))}
+                </div>
+            </section>
+
+            <section id="organismi_viventi">
                 <h4>Gli organismi viventi</h4>
 
                 <p>
@@ -113,16 +81,15 @@ const Nature = () => {
                 <h5>Le principali categorie di organismi viventi</h5>
 
                 <ul>
-                    <li>Animali (Animalia)</li>
-                    <li>Piante (Plantae)</li>
-                    <li>Funghi (Fungi)</li>
-                    <li>Protisti (Protista)</li>
-                    <li>Batteri (Bacteria)</li>
-                    <li>Archei (Archaea)</li>
+                    {livingOrganisms.map((organism) => (
+                        <li key={organism.id}>
+                            {organism.name}
+                        </li>
+                    ))}
                 </ul>
-            </div>
+            </section>
 
-            <div>
+            <section id="animali_estinzione">
                 <h4>Animali a rischio di estinzione</h4>
 
                 <p>
@@ -132,22 +99,13 @@ const Nature = () => {
                 </p>
 
                 <ul>
-                    <li>🐅 Tigre</li>
-                    <li>🦏 Rinoceronte di Giava</li>
-                    <li>🐘 Elefante africano</li>
-                    <li>🐆 Leopardo delle nevi</li>
-                    <li>🦍 Gorilla di montagna</li>
-                    <li>🐼 Panda gigante</li>
-                    <li>🐢 Tartaruga embricata</li>
-                    <li>🐳 Balenottera azzurra</li>
-                    <li>🐬 Vaquita</li>
-                    <li>🦧 Orango del Borneo</li>
-                    <li>🦜 Ara di Spix</li>
-                    <li>🦈 Squalo martello</li>
-                    <li>🐧 Pinguino africano</li>
-                    <li>🦭 Foca monaca mediterranea</li>
+                    {endangeredAnimals.map((animal) => (
+                        <li key={animal.id}>
+                            {animal.emoji} {animal.name}
+                        </li>
+                    ))}
                 </ul>
-            </div>
+            </section>
         </>
     );
 }

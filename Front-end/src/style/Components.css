@@ -601,6 +601,33 @@
     background-image: url('../img/planet/satellite-terrestre.webp');
 }
 
+.materials_Carousel{
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    scroll-snap-type: x mandatory;
+}
+
+.materials_Carousel::-webkit-scrollbar{
+    height: 8px;
+}
+
+.materials_Carousel::-webkit-scrollbar-track{
+    background: #eee;
+    border-radius: 20px;
+}
+
+.materials_Carousel::-webkit-scrollbar-thumb{
+    background: #ec3029;
+    border-radius: 20px;
+}
+
+.materials_Carousel > section{
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
 .materiali_planets {
     margin: 4rem 1rem 1rem 1rem;
     text-align: center;
@@ -626,145 +653,369 @@
     border-radius: 1rem;
 }
 
-.single_material_planet p {
-    border-top: 1px solid black;
-    width: 100%;
+.background_materials_planet{
+    width: 95%;
+    margin: auto;
+    background-color: black;
+    border-radius: 2rem;
+    color: white;
+    padding: 0.5rem;
 }
 
 /* Elementi comuni */
 
 #ferro{
-    background:#6e6e6e86;
+    background: #B0B7C0; /* grigio acciaio */
 }
 
 #ossigeno{
-    background:#6ec5ff67;
+    background: #BFEFFF; /* azzurro pallido (liquido) */
 }
 
 #silicio{
-    background:#c9c9c96b;
+    background: #5A5A5A; /* grigio bluastro */
 }
 
 #magnesio{
-    background:#98fb9856;
+    background: #D9D9D9; /* argento brillante */
 }
 
 #zolfo{
-    background:#ffd90062;
+    background: #F4D03F; /* giallo intenso */
 }
 
 #nichel{
-    background:#b0b0b049;
+    background: #A8A9AD; /* argento con lieve tonalità dorata */
 }
 
 #calcio{
-    background:#f5f5dc36;
+    background: #D8D5C4; /* grigio argenteo chiaro */
 }
 
 #alluminio{
-    background:#c0c0c056;
+    background: #C0C8D0; /* argento chiaro */
 }
 
 #sodio{
-    background:#a7c7e771;
+    background: #D9D9D9; /* argento brillante */
 }
 
 #cromo{
-    background:#7f7f7f73;
+    background: #B8BCC2; /* argento specchiato */
 }
 
 #manganese{
-    background:#c1440e63;
+    background: #8A8A8A; /* grigio */
 }
 
 #fosforo{
-    background:#ffa60046;
+    background: #F4E2A1; /* bianco/giallastro (fosforo bianco) */
 }
 
 #potassio{
-    background:#daa52041;
+    background: #C8C8C8; /* argento */
 }
 
 #titanio{
-    background:#a9a9a93f;
+    background: #A7ADB5; /* grigio argenteo */
 }
 
 #carbonio{
-    background:#2f2f2f42;
+    background: #2E2E2E; /* grafite */
 }
 
 #idrogeno{
-    background:#ffffff60;
+    background: #FFFFFF; /* incolore */
 }
 
 /* Terre Rare */
 
 #scandio{
-    background:#b8e9864b;
+    background: #D0D0D0; /* argento */
 }
 
 #ittrio{
-    background:#a0ced956;
+    background: #C8CCD2; /* argento */
 }
 
 #lantanio{
-    background:#f5deb34b;
+    background: #D3D3D3; /* argento */
 }
 
 #cerio{
-    background:#ffd64f59;
+    background: #BFC4C9; /* grigio argenteo */
 }
 
 #praseodimio{
-    background:#e6e6fa46;
+    background: #A7B7A3; /* argento con lieve tinta verdastra */
 }
 
 #neodimio{
-    background:#b39ddb3f;
+    background: #C2B6D6; /* argento con riflessi violacei */
 }
 
 #promezio{
-    background:#d32f2f4b;
+    background: #A9A9A9; /* mai osservato in massa, stimato grigio metallico */
 }
 
 #samario{
-    background:#90caf950;
+    background: #C0C0C0; /* argento */
 }
 
 #europio{
-    background:#4fc2f752;
+    background: #D8D8D8; /* argento chiaro */
 }
 
 #gadolinio{
-    background:#81c78441;
+    background: #B8BEC5; /* argento */
 }
 
 #terbio{
-    background:#ffab914b;
+    background: #C4C4C4; /* argento */
 }
 
 #disprosio{
-    background:#ce93d83b;
+    background: #BEBEBE; /* argento */
 }
 
 #olmio{
-    background:#bcaaa457;
+    background: #B8B8B8; /* argento */
 }
 
 #erbio{
-    background:#80cbc354;
+    background: #C7C7C7; /* argento */
 }
 
 #tulio{
-    background:#c5e1a550;
+    background: #D0D0D0; /* argento */
 }
 
 #itterbio{
-    background:#ffe0823f;
+    background: #D6D6D6; /* argento chiaro */
 }
 
 #lutezio{
-    background:#bdbdbd4d;
+    background: #B0B0B0; /* argento */
+}
+
+#timeline_planets {
+    text-align: center;
+    margin: 5rem 1rem 1rem 1rem;
+    box-shadow: 0px 0px 6px white;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+#timeline_planets h3{
+    padding: 1rem;
+    border-bottom: 1px solid white;
+    margin: 0;
+}
+
+#timeline_planets section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#timeline_planets p{
+    padding: 1rem;
+    margin: 0;
+    min-height: 11rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.processo_terra{
+    background-size: cover;
+    background-position: center;
+}
+
+#accumulo_materia{
+    background-image: url('../img/planet/fase_1_terra.avif');
+}
+
+#nascita_luna{
+    background-image: url('../img/planet/fase_2_terra..avif');
+}
+
+#raffreddamento_oceani{
+    background-image: url('../img/planet/fase_3_terra..jpg');
+}
+
+#timeline_planets div{
+    position: relative;
+}
+
+#timeline_planets div::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgb(0 0 0 / 6%) 0%, rgb(34 34 34 / 44%) 36%);
+    z-index: 2;
+}
+
+#timeline_planets div > *{
+    position: relative;
+    z-index: 3;
+}
+
+/*css main Nature for phone */
+
+#intro_nature{
+    position: relative;
+    background-image: url('../img/nature.jpg');
+    min-height: 24rem;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+#intro_nature::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 1%, rgb(34 34 34 / 29%) 24%);
+}
+
+#intro_nature > *{
+    position: relative;
+    z-index: 1;
+}
+
+#ambienti_unici {
+    text-align: center;
+    margin: 4rem 1rem 4rem 1rem;
+}
+
+#ambienti_unici div{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.environment_article{
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border: 1px solid #797979;
+    border-radius: 2rem;
+    width: 85%;
+    padding: 0.5rem;
+    margin: auto;
+    min-height: 18rem;
+    overflow: hidden;
+}
+
+.environment_article::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgb(0 0 0 / 6%) 0%, rgb(34 34 34 / 44%) 36%);
+    z-index: 1;
+}
+
+.environment_article > *{
+    position: relative;
+    z-index: 2;
+}
+
+#foresta_amazzonica{
+    background-image: url("../img/nature/foresta_amazzonica.jpg");
+}
+
+#deserto_sahara{
+    background-image: url("../img/nature/deserto_sahara.avif");
+}
+
+#barriera_corallina{
+    background-image: url("../img/nature/barriera_corallina.jpg");
+}
+
+#calotte_polari{
+    background-image: url("../img/nature/calotte_polari.jpg");
+}
+
+#foreste_boreali{
+    background-image: url("../img/nature/foreste_boreali.jpg");
+}
+
+.natural_disaster{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.natural_disaster::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+}
+
+.natural_disaster > *{
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+/* Sfondi */
+
+#volcano{
+    background-image: url("../img/nature/disaster/volcano.webp");
+}
+
+#earthquake{
+    background-image: url("../img/nature/disaster/earthquake.webp");
+}
+
+#tsunami{
+    background-image: url("../img/nature/disaster/tsunami.webp");
+}
+
+#tornado{
+    background-image: url("../img/nature/disaster/tornado.webp");
+}
+
+#hurricane{
+    background-image: url("../img/nature/disaster/hurricane.webp");
+}
+
+#flood{
+    background-image: url("../img/nature/disaster/flood.webp");
+}
+
+#wildfire{
+    background-image: url("../img/nature/disaster/wildfire.webp");
+}
+
+#drought{
+    background-image: url("../img/nature/disaster/drought.webp");
+}
+
+#landslide{
+    background-image: url("../img/nature/disaster/landslide.webp");
+}
+
+#avalanche{
+    background-image: url("../img/nature/disaster/avalanche.webp");
+}
+
+#cold-wave{
+    background-image: url("../img/nature/disaster/cold-wave.webp");
+}
+
+#heat-wave{
+    background-image: url("../img/nature/disaster/heat-wave.webp");
 }
 
 /*css globalFooter*/
