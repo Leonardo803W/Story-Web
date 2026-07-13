@@ -17,10 +17,9 @@ function App() {
       <Routes>
         <Route element = {<MainLayout />}>
           <Route path = "/" element = {<Home />} />
-          <Route path = "/epoche-storiche" element = {<Epoche />} />
-          <Route path="/epoche-storiche/:id" element={<Epoche />} /> 
+          <Route path="/epoche-storiche/:id?" element={<Epoche />} /> 
           <Route path = "/epoca/:epocaId/:subItemId" element = {<DettaglioEpoca />}/>
-          <Route path = "/storie" element = {<Storie />}/>
+          <Route path="/storie/:parametroId?" element={<Storie />} />
           <Route path = "/planets" element = {<Planets />}/>
           <Route path = "/Nature" element = {<Nature />}/>
           <Route path = "/continents" element = {<Continents />} />

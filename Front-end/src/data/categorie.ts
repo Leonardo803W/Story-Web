@@ -83,7 +83,7 @@ export const categorie = [
           },
           {
             id: 2,
-            epoca: "Età Antica",
+            epoca: "Eta Antica",
             eventi: [
               {
                 id: 1,
@@ -105,7 +105,7 @@ export const categorie = [
           },
           {
             id: 4,
-            epoca: "Età Moderna",
+            epoca: "Eta Moderna",
             eventi: [
               {
                 id: 1,
@@ -116,7 +116,7 @@ export const categorie = [
           },
           {
             id: 5,
-            epoca: "Età Contemporanea",
+            epoca: "Eta Contemporanea",
             eventi: [
               {
                 id: 1,
@@ -144,7 +144,7 @@ export const categorie = [
           },
           {
             id: 2,
-            epoca: "Età Antica",
+            epoca: "Eta Antica",
             eventi: [
               {
                 id: 1,
@@ -166,7 +166,7 @@ export const categorie = [
           },
           {
             id: 4,
-            epoca: "Età Moderna",
+            epoca: "Eta Moderna",
             eventi: [
               {
                 id: 1,
@@ -177,7 +177,7 @@ export const categorie = [
           },
           {
             id: 5,
-            epoca: "Età Contemporanea",
+            epoca: "Eta Contemporanea",
             eventi: [
               {
                 id: 1,
@@ -205,7 +205,7 @@ export const categorie = [
           },
           {
             id: 2,
-            epoca: "Età Antica",
+            epoca: "Eta Antica",
             eventi: [
               {
                 id: 1,
@@ -227,7 +227,7 @@ export const categorie = [
           },
           {
             id: 4,
-            epoca: "Età Moderna",
+            epoca: "Eta Moderna",
             eventi: [
               {
                 id: 1,
@@ -238,7 +238,7 @@ export const categorie = [
           },
           {
             id: 5,
-            epoca: "Età Contemporanea",
+            epoca: "Eta Contemporanea",
             eventi: [
               {
                 id: 1,
@@ -266,7 +266,7 @@ export const categorie = [
           },
           {
             id: 2,
-            epoca: "Età Antica",
+            epoca: "Eta Antica",
             eventi: [
               {
                 id: 1,
@@ -288,7 +288,7 @@ export const categorie = [
           },
           {
             id: 4,
-            epoca: "Età Moderna",
+            epoca: "Eta Moderna",
             eventi: [
               {
                 id: 1,
@@ -299,7 +299,7 @@ export const categorie = [
           },
           {
             id: 5,
-            epoca: "Età Contemporanea",
+            epoca: "Eta Contemporanea",
             eventi: [
               {
                 id: 1,
@@ -327,7 +327,7 @@ export const categorie = [
           },
           {
             id: 2,
-            epoca: "Età Antica",
+            epoca: "Eta Antica",
             eventi: [
               {
                 id: 1,
@@ -349,7 +349,7 @@ export const categorie = [
           },
           {
             id: 4,
-            epoca: "Età Moderna",
+            epoca: "Eta Moderna",
             eventi: [
               {
                 id: 1,
@@ -360,7 +360,7 @@ export const categorie = [
           },
           {
             id: 5,
-            epoca: "Età Contemporanea",
+            epoca: "Eta Contemporanea",
             eventi: [
               {
                 id: 1,
@@ -388,7 +388,7 @@ export const categorie = [
           },
           {
             id: 2,
-            epoca: "Età Antica",
+            epoca: "Eta Antica",
             eventi: [
               {
                 id: 1,
@@ -410,7 +410,7 @@ export const categorie = [
           },
           {
             id: 4,
-            epoca: "Età Moderna",
+            epoca: "Eta Moderna",
             eventi: [
               {
                 id: 1,
@@ -421,12 +421,12 @@ export const categorie = [
           },
           {
             id: 5,
-            epoca: "Età Contemporanea",
+            epoca: "Eta Contemporanea",
             eventi: [
               {
                 id: 1,
                 title: "Internet",
-                text: "La rete globale ha trasformato comunicazione, informazione e società."
+                text: "La rete globale ha trasformato comunicazione, informazione e sociEta."
               }
             ]
           }
@@ -449,7 +449,7 @@ export const categorie = [
           },
           {
             id: 2,
-            epoca: "Età Antica",
+            epoca: "Eta Antica",
             eventi: [
               {
                 id: 1,
@@ -471,7 +471,7 @@ export const categorie = [
           },
           {
             id: 4,
-            epoca: "Età Moderna",
+            epoca: "Eta Moderna",
             eventi: [
               {
                 id: 1,
@@ -482,7 +482,7 @@ export const categorie = [
           },
           {
             id: 5,
-            epoca: "Età Contemporanea",
+            epoca: "Eta Contemporanea",
             eventi: [
               {
                 id: 1,

@@ -2,7 +2,7 @@
 
 .globalNavbar{
     position: fixed;
-    z-index: 3;
+    z-index: 100;
     width: 100%;
     background-color: black;
     box-shadow: 0px 0px 14px 8px #757575;
@@ -863,6 +863,10 @@
 
 /*css main Nature for phone */
 
+.big_section{
+    margin: 5rem 0rem 5rem 0rem;
+}
+
 #intro_nature{
     position: relative;
     background-image: url('../img/nature.jpg');
@@ -946,52 +950,43 @@
     background-image: url("../img/nature/foreste_boreali.jpg");
 }
 
-.natural_disaster{
-    background-size: cover;
+.img_disaster, .img_animals{
+    min-height: 18rem;
+    padding: 3rem 1rem 1rem 1rem;
     background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 1rem;
-    position: relative;
-    overflow: hidden;
+    background-size: cover;
+    border-radius: 4rem 4rem 0rem 0rem;
 }
 
-.natural_disaster::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,.45);
+.natural_disaster, .risked_animal{
+    border-radius: 4rem 4rem 2rem 2rem;
+    border: 1px solid #383838;
 }
 
-.natural_disaster > *{
-    position: relative;
-    z-index: 1;
-    color: white;
-}
-
-/* Sfondi */
+/* Sfondi disastri naturali*/
 
 #volcano{
     background-image: url("../img/nature/disaster/volcano.webp");
 }
 
 #earthquake{
-    background-image: url("../img/nature/disaster/earthquake.webp");
+    background-image: url("../img/nature/disaster/earthquake.avif");
 }
 
 #tsunami{
-    background-image: url("../img/nature/disaster/tsunami.webp");
+    background-image: url("../img/nature/disaster/tsunami.avif");
 }
 
 #tornado{
-    background-image: url("../img/nature/disaster/tornado.webp");
+    background-image: url("../img/nature/disaster/tornado.png");
 }
 
 #hurricane{
-    background-image: url("../img/nature/disaster/hurricane.webp");
+    background-image: url("../img/nature/disaster/hurricane.avif");
 }
 
 #flood{
-    background-image: url("../img/nature/disaster/flood.webp");
+    background-image: url("../img/nature/disaster/flood.jpg");
 }
 
 #wildfire{
@@ -999,23 +994,170 @@
 }
 
 #drought{
-    background-image: url("../img/nature/disaster/drought.webp");
+    background-image: url("../img/nature/disaster/drought.jpg");
 }
 
 #landslide{
-    background-image: url("../img/nature/disaster/landslide.webp");
+    background-image: url("../img/nature/disaster/landslide.jpg");
 }
 
 #avalanche{
-    background-image: url("../img/nature/disaster/avalanche.webp");
+    background-image: url("../img/nature/disaster/avalanche.jpeg");
 }
 
 #cold-wave{
-    background-image: url("../img/nature/disaster/cold-wave.webp");
+    background-image: url("../img/nature/disaster/cold-wave.jpeg");
 }
 
 #heat-wave{
-    background-image: url("../img/nature/disaster/heat-wave.webp");
+    background-image: url("../img/nature/disaster/heat-wave.jpg");
+}
+
+/* Sfondi animali a rischio*/
+
+#tiger {
+    background-image: url("../img/nature/animal_risk/tiger.avif");
+}
+
+#javan-rhino {
+    background-image: url("../img/nature/animal_risk/javan-rhino.webp");
+}
+
+#african-elephant {
+    background-image: url("../img/nature/animal_risk/african-elephant.jpeg");
+}
+
+#snow-leopard {
+    background-image: url("../img/nature/animal_risk/snow-leopard.webp");
+}
+
+#mountain-gorilla {
+    background-image: url("../img/nature/animal_risk/mountain-gorilla.webp");
+}
+
+#giant-panda {
+    background-image: url("../img/nature/animal_risk/giant-panda.jpeg");
+}
+
+#hawksbill {
+    background-image: url("../img/nature/animal_risk/hawksbill.jpeg");
+}
+
+#blue-whale {
+    background-image: url("../img/nature/animal_risk/blue-whale.jpeg");
+}
+
+#borneo-orangutan {
+    background-image: url("../img/nature/animal_risk/borneo-orangutan.jpg");
+}
+
+#spix-macaw {
+    background-image: url("../img/nature/animal_risk/spix-macaw.jpg");
+}
+
+#hammerhead {
+    background-image: url("../img/nature/animal_risk/hammerhead.webp");
+}
+
+#african-penguin {
+    background-image: url("../img/nature/animal_risk/african-penguin.jpeg");
+}
+
+#monk-seal {
+    background-image: url("../img/nature/animal_risk/monk-seal.webp");
+}
+
+.organism-circle {
+    width: 95%;
+    height: 25rem;
+    margin: 3rem 0rem 3rem 0rem;
+    border-radius: 50%;
+    background: conic-gradient(#F94144 49deg 51deg, #43AA8B 70deg 114deg, #9B5DE5 120deg 180deg, #F9C74F 180deg 240deg, #277DA1 240deg 300deg, #F3722C 300deg 360deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.organism-content {
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    background: #2b2b2b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0rem 1rem 0rem;
+    overflow: hidden;
+}
+
+.organism-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.organism-buttons button {
+    padding: 1rem;
+    background-color: black;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px white;
+}
+
+.kindoms {
+    min-height: 25rem;
+    padding: 2rem;
+    opacity: 1;
+}
+
+/*css main Story for phone */
+
+.group_button_story {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3rem 1rem 1rem 1rem;
+}
+
+.button_story, .button_active_story  {
+    width: 40%;
+    background-color: #000000;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.button_active_story {
+    background-color: #c71515;
+}
+
+.story_introduction {
+    text-align: center;
+    box-shadow: 0px 0px 6px white;
+    margin: 5rem 1rem 1rem 1rem;
+    border-radius: 4rem;
+    padding: 0.5rem;
+}
+
+.big_section_story {
+    text-align: center;
+    margin: 6rem 1rem 1rem 1rem;
+}
+
+.group_cards_story{
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 1rem 6rem 1rem;
+}
+
+.card_story {
+    width: 90%;
+    border: 1px solid #75fffd5e;
+    border-radius: 1rem;
+    padding: 0.5rem;
 }
 
 /*css globalFooter*/

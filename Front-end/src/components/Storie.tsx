@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { categorie } from "../data/categorie";
+import { useParams } from "react-router-dom";
 
 const Storie = () => {
 
+    const { parametroId } = useParams();
     const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
     const [openEvent, setOpenEvent] = useState<number[]>([]);
+
+
+    useEffect(() => {
+        if (parametroId) {
+            setSelectedCategory(Number(parametroId));
+        }
+    }, [parametroId]);
 
     const toggleCategory = (id: number) => {
         setSelectedCategory(prev => prev === id ? null : id);
@@ -22,12 +31,17 @@ const Storie = () => {
 
     return(
         <>
-            <section>
+            <section className = "text-center">
                 <h3>Che cosa vuoi scoprire oggi?</h3>
 
-                <div>
+                <div className = "group_button_story">
                     {categorie[0].content1?.map((item) => (
                         <button
+                            className={
+                                selectedCategory === item.id
+                                    ? "button_active_story"
+                                    : "button_story"
+                            }
                             key = {item.id} 
                             onClick={() => toggleCategory(item.id)}
                         >
@@ -39,7 +53,7 @@ const Storie = () => {
 
 
             {selectedData && (
-                <section>
+                <section className = "big_section_story">
                     <h3>{selectedData.title}</h3>
 
                     {selectedData.content?.map((subItem) => (
@@ -47,12 +61,17 @@ const Storie = () => {
                             key={subItem.id}
                             onClick={() => toggleEvents(subItem.id)}
                         >
-                            <div>{subItem.epoca}</div>
+                            <div
+                                id={`card-${subItem.epoca}`.toLowerCase().replace(/\s+/g, '-')}
+                                className = {openEvent.includes(subItem.id) ? "macro_epoche_card_active" : "macro_epoche_card"}
+                                >
+                                    <h3>{subItem.epoca}</h3>
+                                </div>
 
                             {openEvent.includes(subItem.id) && (
-                                <section>
+                                <section className = "group_cards_story">
                                     {subItem.eventi?.map((event) => (
-                                        <div key={event.id}>
+                                        <div key={event.id} className = "card_story">
                                             <h3>{event.title}</h3>
                                             <p>{event.text}</p>
                                         </div>
@@ -65,7 +84,7 @@ const Storie = () => {
             )}
 
             <section className = {selectedCategory ? "d-none" : "d-block"}>
-                    <div className="storie-introduzione">
+                    <div className = "story_introduction text-center">
                         <p>
                             Ogni evento della storia lascia un segno. Le battaglie non modificano soltanto
                             i confini delle nazioni, ma lasciano cicatrici profonde nelle persone e nelle

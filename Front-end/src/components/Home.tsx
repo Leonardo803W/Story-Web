@@ -66,11 +66,15 @@ const Home = () => {
          
           <div className="carousel">
             {categorie[0].content1?.map((item) => (
-              <div key = {item.id} className="carousel-card">
-                <img src = {item.img}></img>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </div>
+              <Link  
+                className="carousel-card"
+                  to={`/storie/${item.id}`}
+                  key={item.id}
+                >
+                  <img src = {item.img}></img>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+              </Link>
             ))}
           </div>
 

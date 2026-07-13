@@ -1,3 +1,5 @@
+/*css globale*/
+
 body{
     background-color: rgb(0, 0, 0);
 }
@@ -25,4 +27,58 @@ p, button{
 a{
     text-decoration: none;
     font-size: larger;
+}
+
+/*css per caroselli comuni*/
+
+.Carousel{
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    scroll-snap-type: x mandatory;
+    margin: 1rem;
+    padding-bottom: 3rem;
+}
+
+.Carousel::-webkit-scrollbar{
+    height: 8px;
+}
+
+.Carousel::-webkit-scrollbar-track{
+    background: #eee;
+    border-radius: 20px;
+}
+
+.Carousel::-webkit-scrollbar-thumb{
+    background: #ec3029;
+    border-radius: 20px;
+}
+
+.Carousel_slide{
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+}
+
+/*css per card comuni*/
+
+.card{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+}
+
+.card > *{
+    position: relative;
+    z-index: 1;
+    color: white;
 }

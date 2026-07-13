@@ -1,9 +1,13 @@
+import { useState } from "react";
+
 import { uniqueEnvironments } from "../data/enviroment_nature";
 import { livingOrganisms } from "../data/living_organism";
 import { endangeredAnimals } from "../data/living_organism_risk";
 import { naturalDisasters } from "../data/nature_disaster";
 
 const Nature = () => {
+
+    const [selectedOrganism, setSelectedOrganism] = useState(null);
 
     return(
         <>
@@ -42,35 +46,37 @@ const Nature = () => {
                 </div>
             </section>
 
-            <section id="catastrofi_naturali">
-                <h4>Catastrofi naturali</h4>
+            <section className = "big_section">
+                <h4 className = "text-center">Catastrofi naturali</h4>
 
-                <p>
+                <p className = "text-center">
                     Le catastrofi naturali sono eventi causati dai processi
                     geologici, atmosferici o climatici della Terra. Alcune
                     fanno parte del normale ciclo del pianeta, mentre altre
                     possono essere aggravate dai cambiamenti climatici.
                 </p>
 
-                <div>
+                <div className = "Carousel">
                     {naturalDisasters.map((disaster) => (
                         <article 
                             key={disaster.id} 
-                            id={disaster.id}
-                            className = "natural_disaster"
+                            className = " Carousel_slide natural_disaster"
                         >
-                            <h3>{disaster.name}</h3>
+                            <div className = "img_disaster" id={disaster.id}></div>
+                            <div className = "p-3">
+                                <h3>{disaster.name}</h3>
 
-                            <p>{disaster.description}</p>
+                                <p>{disaster.description}</p>
+                            </div>
                         </article>
                     ))}
                 </div>
             </section>
 
-            <section id="organismi_viventi">
-                <h4>Gli organismi viventi</h4>
+            <section className = "big_section" id="organismi_viventi">
+                <h4 className = "text-center">Gli organismi viventi</h4>
 
-                <p>
+                <p className = "text-center">
                     Attualmente sono state descritte dalla scienza circa
                     <strong> 2,2 milioni di specie</strong>, ma si stima che
                     sulla Terra possano esisterne tra gli 8 e i 10 milioni.
@@ -78,33 +84,71 @@ const Nature = () => {
                     tropicali, non sono ancora state scoperte.
                 </p>
 
-                <h5>Le principali categorie di organismi viventi</h5>
+                <div className="organism-circle">
 
-                <ul>
+                    <div className="organism-content">
+
+                        {selectedOrganism ? (
+                            <>
+                                <div
+                                    className = "card kindoms"
+                                    style={{ backgroundImage: `url(${selectedOrganism.img})` }}
+                                >
+                                    <h3>{selectedOrganism.name}</h3>
+                                    <p>{selectedOrganism.description}</p>
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <h3>Gli organismi viventi</h3>
+                                <p>Seleziona una categoria.</p>
+                            </>
+                        )}
+
+                    </div>
+
+                </div>
+
+                <div className="organism-buttons">
+
                     {livingOrganisms.map((organism) => (
-                        <li key={organism.id}>
+
+                        <button
+                            key={organism.id}
+                            onClick={() => setSelectedOrganism(organism)}
+                        >
                             {organism.name}
-                        </li>
+                        </button>
+
                     ))}
-                </ul>
+
+                </div>
             </section>
 
-            <section id="animali_estinzione">
-                <h4>Animali a rischio di estinzione</h4>
+            <section className = "big_section" id="animali_estinzione">
+                <h4 className = "text-center">Animali a rischio di estinzione</h4>
 
-                <p>
+                <p className = "text-center">
                     Molte specie stanno diminuendo a causa della perdita del
                     loro habitat, del cambiamento climatico, dell'inquinamento,
                     della caccia e del commercio illegale.
                 </p>
 
-                <ul>
+                <div className = "Carousel">
                     {endangeredAnimals.map((animal) => (
-                        <li key={animal.id}>
-                            {animal.emoji} {animal.name}
-                        </li>
+                        <article 
+                            key={animal.id} 
+                            className = " Carousel_slide risked_animal"
+                        >
+                            <div className = "img_animals" id={animal.id}></div>
+                            <div className = "p-3">
+                                <h3>{animal.name}</h3>
+
+                                <p>{animal.description}</p>
+                            </div>
+                        </article>
                     ))}
-                </ul>
+                </div>
             </section>
         </>
     );
