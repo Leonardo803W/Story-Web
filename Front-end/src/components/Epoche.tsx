@@ -75,7 +75,7 @@ const Epoche = () => {
                         <div 
                             id={`card-${item.title}`.toLowerCase().replace(/\s+/g, '-')}
                             className = {openCards.includes(item.id) ? "macro_epoche_card_active" : "macro_epoche_card"}
-                            onClick={() => toggleCard(item.id, 'macro_epoca')}
+                            onClick={() => toggleCard(item.id)}
                         >
                             <h3>{item.title}</h3>
                         </div>
@@ -86,7 +86,7 @@ const Epoche = () => {
                                     <div
                                         key={subItem.id}
                                         className="card_epoche_subitem_div"
-                                        onClick={() => toggleCard(subItem.id, 'subitem')}
+                                        onClick={() => toggleCard(subItem.id)}
                                     >
                                         <h4>{subItem.title}</h4>
                                         <p>{subItem.text}</p>
