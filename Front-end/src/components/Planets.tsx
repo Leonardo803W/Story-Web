@@ -1,6 +1,16 @@
 import { planetMaterials } from "../data/materials";
+import { motion } from "framer-motion";
 
 const Planets = () => {
+
+    const fadeIn = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.8, ease: "easeOut" },
+        },
+    };
 
     return(
         <>
@@ -13,7 +23,13 @@ const Planets = () => {
                 </p>
             </section>
 
-            <section className="content_planets">
+            <motion.section
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className="content_planets"
+            >
                 <h3>Struttura della Terra: Elementi principali</h3>
 
                 <div className="article_planet">
@@ -75,9 +91,15 @@ const Planets = () => {
                         </div>
                     </article>
                 </div>
-            </section>
+            </motion.section>
 
-            <section className = "materiali_planets">
+            <motion.section
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className = "materiali_planets"
+            >
                 <h4>Elementi che compongono la Terra</h4>
 
                 <section className="materials_Carousel">
@@ -112,9 +134,15 @@ const Planets = () => {
                         </section>
                     ))}
                 </section>
-            </section>
+            </motion.section>
 
-            <article id = "timeline_planets">
+            <motion.article
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                id = "timeline_planets"
+            >
                 <h3>Il processo di formazione della terra</h3>
 
                     <section>
@@ -128,7 +156,7 @@ const Planets = () => {
                     <div className = "processo_terra" id = "raffreddamento_oceani">
                         <p>Raffreddamento e oceani</p>
                     </div>
-            </article>
+            </motion.article>
         </>
     )
 }

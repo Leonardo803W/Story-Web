@@ -1,10 +1,20 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import { epoche } from "../data/epoche";
 import { TimeLine } from "../data/Timeline";
 import { categorie } from "../data/categorie";
 
 const Home = () => {
+
+  const fadeIn = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
 
 
   return(
@@ -14,7 +24,12 @@ const Home = () => {
           <p>Scopri le civiltà che hanno plasmato il nostro mondo, le invenzioni che hanno cambiato la storia, e le battaglie che hanno definito il nostro futuro.</p>
         </section>
 
-        <section>
+        <motion.section
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <h3 id = "le-epoche-storiche">Le Epoche Storiche</h3>
             {epoche[0]?.content1?.map((item) => (
                 <Link 
@@ -36,9 +51,14 @@ const Home = () => {
               Scopri di più
             </div>
           </Link>
-        </section>
+        </motion.section>
 
-        <section>
+        <motion.section
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <article id = "earth">
               <h3>Earth</h3>
               <p>Sai come si e formata la terra e quali materiali la compongono? Scopri di più!</p>
@@ -59,9 +79,15 @@ const Home = () => {
               </div>
             </Link>
           </article>
-        </section>
+        </motion.section>
 
-        <section className="discover-section">
+        <motion.section
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="discover-section"
+        >
           <h3 className = "text-center mb-2">Il lato ingegnoso e crudo dell'umanità</h3>
          
           <div className="carousel">
@@ -83,47 +109,60 @@ const Home = () => {
               Scopri di più
             </div>
           </Link>
-        </section>
+        </motion.section>
 
-        <section id = "continenti">
-            <h3 className = "text-center mb-2">I continenti</h3>
-            <p>Ogni continente ha le sue caratteristiche uniche e la storia non e la stessa per ogni continente, come si sono formati e quali storie hanno?</p>
-            
-            <Link to="/continents">
-              <div className = "falseButtonContinenti">
-                Scopri di più
-              </div>
-            </Link>
-        </section>
+        <motion.section
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <section id = "continenti">
+              <h3 className = "text-center mb-2">I continenti</h3>
+              <p>Ogni continente ha le sue caratteristiche uniche e la storia non e la stessa per ogni continente, come si sono formati e quali storie hanno?</p>
+              
+              <Link to="/continents">
+                <div className = "falseButtonContinenti">
+                  Scopri di più
+                </div>
+              </Link>
+          </section>
 
-        <section className="dicover-more">
-          <h3 className = "text-center mb-5">Meraviglie e curiosità</h3>
+          <section className="dicover-more">
+            <h3 className = "text-center mb-5">Meraviglie e curiosità</h3>
 
-          <div className="carousel">
-            <article>
-                <h3>5.000 +</h3>
-                <p>Anni di storia</p>
+            <div className="Carousel">
+              <article className = "item_home">
+                  <h3>5.000 +</h3>
+                  <p>Anni di storia</p>
               </article>
-              <article>
-                <h3>1.000 +</h3>
-                <p>Civiltà Esplorate</p>
+              <article className = "item_home">
+                  <h3>1.000 +</h3>
+                  <p>Civiltà Esplorate</p>
               </article>
-              <article>
-                <h3>500 +</h3>
-                <p>Invenzioni Documentate</p>
-              </article>
-              <article>
-                <h3>200 +</h3>
-                <p>Battaglie Analizzate</p>
-              </article>
-              <article>
-                <h3>7.000 +</h3>
-                <p>lingue parlate e conosciute</p>
-              </article>
-          </div>
-        </section>
+              <article className = "item_home">
+                  <h3>500 +</h3>
+                  <p>Invenzioni Documentate</p>
+                </article>
+                <article className = "item_home">
+                    <h3>200 +</h3>
+                    <p>Battaglie Analizzate</p>
+                </article>
+                <article className = "item_home">
+                    <h3>7.000 +</h3>
+                    <p>lingue parlate e conosciute</p>
+                </article>
+            </div>
+          </section>
+        </motion.section>
 
-        <section id = "timeline">
+        <motion.section
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          id = "timeline"
+        >
           <div className="timelineCarousel">
 
             {TimeLine.map((timeline) => (
@@ -150,7 +189,7 @@ const Home = () => {
             ))}
 
           </div>
-        </section>
+        </motion.section>
     </>
   );
 };

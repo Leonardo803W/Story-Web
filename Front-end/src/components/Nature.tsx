@@ -4,10 +4,20 @@ import { uniqueEnvironments } from "../data/enviroment_nature";
 import { livingOrganisms } from "../data/living_organism";
 import { endangeredAnimals } from "../data/living_organism_risk";
 import { naturalDisasters } from "../data/nature_disaster";
+import { motion } from "framer-motion";
 
 const Nature = () => {
 
     const [selectedOrganism, setSelectedOrganism] = useState(null);
+
+    const fadeIn = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.8, ease: "easeOut" },
+        },
+    };
 
     return(
         <>
@@ -28,7 +38,13 @@ const Nature = () => {
                 </p>
             </section>
 
-            <section id="ambienti_unici">
+            <motion.section
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                id="ambienti_unici"
+            >
                 <h4>Ambienti unici della Terra</h4>
 
                 <div>
@@ -44,9 +60,15 @@ const Nature = () => {
                         </article>
                     ))}
                 </div>
-            </section>
+            </motion.section>
 
-            <section className = "big_section">
+            <motion.section
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className = "big_section"
+            >
                 <h4 className = "text-center">Catastrofi naturali</h4>
 
                 <p className = "text-center">
@@ -71,9 +93,15 @@ const Nature = () => {
                         </article>
                     ))}
                 </div>
-            </section>
+            </motion.section>
 
-            <section className = "big_section" id="organismi_viventi">
+            <motion.section
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className = "big_section" id="organismi_viventi"
+            >
                 <h4 className = "text-center">Gli organismi viventi</h4>
 
                 <p className = "text-center">
@@ -123,9 +151,15 @@ const Nature = () => {
                     ))}
 
                 </div>
-            </section>
+            </motion.section>
 
-            <section className = "big_section" id="animali_estinzione">
+            <motion.section
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className = "big_section" id="animali_estinzione"
+            >
                 <h4 className = "text-center">Animali a rischio di estinzione</h4>
 
                 <p className = "text-center">
@@ -149,7 +183,7 @@ const Nature = () => {
                         </article>
                     ))}
                 </div>
-            </section>
+            </motion.section>
         </>
     );
 }

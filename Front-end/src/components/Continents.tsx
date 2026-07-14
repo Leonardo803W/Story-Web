@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from "framer-motion";
 
 import img from '../img/continents/Alfred Wegener.jpg'
 
@@ -9,6 +10,15 @@ import { supercontinenti } from "../data/supercontinenti"
 const Continents = () => {
 
     const [selectedContinent, setSelectedContinent] = useState(null);
+
+    const fadeIn = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.8, ease: "easeOut" },
+        },
+    };
 
     return (
         <>
@@ -22,7 +32,13 @@ const Continents = () => {
                     </p>
                 </div>
 
-                <article id = 'continent'>
+                <motion.article
+                    variants={fadeIn}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    id = 'continent'
+                >
                     <h3>La deriva dei continenti</h3>
 
                     <div id = 'first_text'>
@@ -47,9 +63,14 @@ const Continents = () => {
                             geologiche (continuità di catene montuose e tipi di roccia) e paleoclimatiche.
                         </p>
                     </div>
-                </article>
+                </motion.article>
 
-                <div>
+                <motion.section
+                    variants={fadeIn}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                >
                     <section className = "intro_supercontinenti">
                         <h2>I Supercontinenti della Terra</h2>
 
@@ -86,9 +107,15 @@ const Continents = () => {
                         </div>
                         ))}
                     </div>
-                </div>
+                </motion.section>
 
-                <div className = 'modern_continents'>
+                <motion.section
+                    variants={fadeIn}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    className = 'modern_continents'
+                >
                     <h2>I continenti di oggi</h2>
 
 
@@ -139,7 +166,7 @@ const Continents = () => {
                         </button>
                         ))}
                     </div>
-                </div>
+                </motion.section>
             </section>
         </>
     )

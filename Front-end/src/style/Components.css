@@ -11,6 +11,10 @@
     justify-content: space-around;
 }
 
+.item_menu {
+    margin-top: 5rem;
+}
+
 .buttonNavbar{
     background-color: black;
     border: none;
@@ -53,6 +57,14 @@
 }
 
 /*css main home for phone */
+
+.item_home {
+    flex: 0 0 28%;
+    scroll-snap-align: start;
+    text-align: center;
+    border: 1px solid #37a093;
+    border-radius: 2rem;
+}
 
 .mainLayout{
     margin-top: 6rem;

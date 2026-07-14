@@ -4,12 +4,10 @@ import { Link } from "react-router-dom";
 const NAV_LINKS = [ 
     { to: "/", label: "Home" }, 
     { to: "/epoche-storiche", label: "Epoche storiche" }, 
-    { to: "/IlLatoOscuro", label: "Il lato oscuro e ingegnoso dell'umanità" }, 
-    { to: "/Terra", label: "Terra" }, 
+    { to: "/storie", label: "Il lato oscuro e ingegnoso dell'umanità" }, 
+    { to: "/planets", label: "Terra" }, 
     { to: "/Natura", label: "Natura" }, 
-    { to: "/Meraviglie", label: "Meraviglie e curiosità" }, 
-    { to: "/Continenti", label: "I continenti" }, 
-    { to: "/Timeline", label: "Time line" },
+    { to: "/continents", label: "I continenti" }, 
   ]; 
 
 const GlobalNavbar = () => {
@@ -37,7 +35,7 @@ const GlobalNavbar = () => {
                 <p onClick={closeMenu}>✕</p> 
                 </div> 
                 
-                <ul className = "mt-4">
+                <ul className = "item_menu">
                     {NAV_LINKS.map((link) => (
                         <li key={link.to} onClick = {closeMenu} className = "mobile-menu-item">
                             <Link to={link.to}>{link.label}</Link>
