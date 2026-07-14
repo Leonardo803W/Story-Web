@@ -1160,6 +1160,132 @@
     padding: 0.5rem;
 }
 
+/*css main Continents for phone */
+
+#intro_continents{
+    position: relative;
+    background-image: url('../img/continenti.jpg');
+    background-size: cover;
+    text-align: center;
+    padding: 8rem 3rem 0rem 3rem;
+    min-height: 30rem;
+    background-position: center;
+}
+
+#intro_continents::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgb(0 0 0 / 100%) 10%, rgb(34 34 34 / 50%) 22%);
+}
+
+#intro_continents > *{
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+#continent{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+#first_text{
+    display: flex;
+    width: 95%;
+    background-color: gray;
+    border-radius: 0rem 4rem 4rem 0rem;
+    margin-top: 3rem;
+}
+
+#second_text{
+    width: 95%;
+    background: linear-gradient(149deg, rgb(91 209 44 / 76%) 34%, rgb(96 204 197 / 81%) 63%);
+    border-radius: 4rem 0rem 0rem 4rem;
+    margin-top: 3rem;
+    margin-left: auto;
+    padding: 1rem;
+}
+
+.intro_supercontinenti{
+    text-align: center;
+    margin: 5rem 1rem 4rem 1rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.text_supercontinets{
+    width: 100%;
+    border: 1px solid #5e5e5e;
+    border-radius: 2rem;
+    padding: 1rem;
+    text-align: left;
+}
+
+.modern_continents {
+    text-align: center;
+    margin-top: 5rem;
+    box-shadow: 0px -8px 16px -8px white;
+    border-radius: 1rem 1rem 0rem 0rem;
+    padding-top: 2rem;
+    position: relative;
+}
+
+.box_continents_modern{
+    margin: 2rem 0rem 0rem 0rem;
+    text-align: left;
+}
+
+.today_continents_modern{
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    min-height: 25rem;
+    padding: 4rem 0rem 0rem 0rem;
+}
+
+.today_continents_modern::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+}
+
+.today_continents_modern > *{
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+#Africa{
+    background-image: url(../img/continents/africa.jpg);
+}
+
+#Antartide{
+    background-image: url(../img/continents/antartide.jpg);
+}
+
+#Asia{
+    background-image: url(../img/continents/asia.webp);
+}
+
+#Europa{
+    background-image: url(../img/continents/europa.jpeg);
+}
+
+#America_del_Nord{
+    background-image: url(../img/continents/america\ del\ nord.jpg);
+}
+
+#America_del_Sud{
+    background-image: url(../img/continents/america\ del\ sud.jpg);
+}
+
+#Oceania{
+    background-image: url(../img/continents/oceania.jpg);
+}
+
 /*css globalFooter*/
 
 #footer{
