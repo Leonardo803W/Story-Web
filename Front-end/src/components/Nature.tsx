@@ -4,18 +4,24 @@ import { uniqueEnvironments } from "../data/enviroment_nature";
 import { livingOrganisms } from "../data/living_organism";
 import { endangeredAnimals } from "../data/living_organism_risk";
 import { naturalDisasters } from "../data/nature_disaster";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 const Nature = () => {
 
     const [selectedOrganism, setSelectedOrganism] = useState(null);
 
-    const fadeIn = {
-        hidden: { opacity: 0, y: 50 },
+    const fadeIn: Variants = {
+        hidden: {
+        opacity: 0,
+        y: 50,
+        },
         visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.8, ease: "easeOut" },
+        transition: {
+            duration: 0.8,
+            ease: "easeOut",
+        },
         },
     };
 

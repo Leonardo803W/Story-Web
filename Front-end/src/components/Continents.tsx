@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 import img from '../img/continents/Alfred Wegener.jpg'
 
@@ -11,14 +11,20 @@ const Continents = () => {
 
     const [selectedContinent, setSelectedContinent] = useState(null);
 
-    const fadeIn = {
-        hidden: { opacity: 0, y: 50 },
-        visible: {
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.8, ease: "easeOut" },
+    const fadeIn: Variants = {
+        hidden: {
+            opacity: 0,
+            y: 50,
         },
-    };
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+            duration: 0.8,
+            ease: "easeOut",
+            },
+        },
+        };
 
     return (
         <>

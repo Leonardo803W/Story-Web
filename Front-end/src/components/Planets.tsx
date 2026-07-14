@@ -1,14 +1,20 @@
 import { planetMaterials } from "../data/materials";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 const Planets = () => {
 
-    const fadeIn = {
-        hidden: { opacity: 0, y: 50 },
+    const fadeIn: Variants = {
+        hidden: {
+        opacity: 0,
+        y: 50,
+        },
         visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.8, ease: "easeOut" },
+        transition: {
+            duration: 0.8,
+            ease: "easeOut",
+        },
         },
     };
 
