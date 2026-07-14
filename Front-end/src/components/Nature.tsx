@@ -8,7 +8,8 @@ import { motion, type Variants } from "framer-motion";
 
 const Nature = () => {
 
-    const [selectedOrganism, setSelectedOrganism] = useState(null);
+    const [selectedOrganism, setSelectedOrganism] =
+    useState<(typeof livingOrganisms)[number] | null>(null);
 
     const fadeIn: Variants = {
         hidden: {

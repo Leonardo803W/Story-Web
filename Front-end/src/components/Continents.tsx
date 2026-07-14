@@ -9,7 +9,8 @@ import { supercontinenti } from "../data/supercontinenti"
 
 const Continents = () => {
 
-    const [selectedContinent, setSelectedContinent] = useState(null);
+    const [selectedContinent, setSelectedContinent] =
+    useState<(typeof today_continents)[number] | null>(null);
 
     const fadeIn: Variants = {
         hidden: {
