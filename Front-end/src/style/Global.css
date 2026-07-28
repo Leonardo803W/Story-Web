@@ -70,14 +70,14 @@ a{
     overflow: hidden;
 }
 
-.card::before{
+.card::before, #group_line_time div::before{
     content: "";
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,.45);
 }
 
-.card > *{
+.card > *, #group_line_time div > *{
     position: relative;
     z-index: 1;
     color: white;

@@ -1,201 +1,38 @@
-import { Link } from "react-router-dom";
-import { motion, type Variants } from "framer-motion";
+import { AnimatedSection } from "./AnimatedSection"
 
-import { epoche } from "../data/epoche";
-import { TimeLine } from "../data/Timeline";
-import { categorie } from "../data/categorie";
+import IntroHome from "./IntroHome";
+import HistoricalEpochs from "./HistoricalEpochs";
+import EarthNatureSection from "./EarthNatureSection";
+import StoriesSection from "./StoriesSection";
+import ContinentsSection from "./ContinentsSection";
+import TimelineSection from "./TimelineSection";
 
 const Home = () => {
-
-  const fadeIn: Variants = {
-    hidden: {
-      opacity: 0,
-      y: 50,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
-  };
 
 
   return(
     <>
-        <section className = "home">
-          <h1>Viaggio nel Tempo</h1>
-          <p>Scopri le civiltà che hanno plasmato il nostro mondo, le invenzioni che hanno cambiato la storia, e le battaglie che hanno definito il nostro futuro.</p>
-        </section>
+        <IntroHome />
 
-        <motion.section
-          variants={fadeIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <h3 id = "le-epoche-storiche">Le Epoche Storiche</h3>
-            {epoche[0]?.content1?.map((item) => (
-                <Link 
-                  to={`/epoche-storiche/${item.id}`}
-                  key={item.id}
-                >
-                  <div className="card_epoche">
-                      <img src={item.img} alt={item.title} />
-                      <div className="card_epoche_text">
-                          <h5>{item.title}</h5>
-                          <p>{item.text}</p>
-                      </div>
-                  </div>
-              </Link>
-            ))}
+        <AnimatedSection>
+          <HistoricalEpochs />
+        </AnimatedSection>
 
-          <Link to="/epoche-storiche">
-            <div className = "falseButton">
-              Scopri di più
-            </div>
-          </Link>
-        </motion.section>
+        <AnimatedSection>
+          <EarthNatureSection />
+        </AnimatedSection>
 
-        <motion.section
-          variants={fadeIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <article id = "earth">
-              <h3>Earth</h3>
-              <p>Sai come si e formata la terra e quali materiali la compongono? Scopri di più!</p>
-            
-            <Link to="/Planets">
-              <div className = "falseButtonEarth">
-                Scopri di più
-              </div>
-            </Link>
-          </article>
-          <article id = "nature">
-            <h3>Nature</h3>
-            <p>Ogni ambiente ha le sue caratteristiche uniche, perche'? Gli esseri viventi non possono vivere senza.</p>
-            
-            <Link to="/Nature">
-              <div className = "falseButtonNature">
-                Scopri di più
-              </div>
-            </Link>
-          </article>
-        </motion.section>
+        <AnimatedSection>
+          <StoriesSection />
+        </AnimatedSection>
 
-        <motion.section
-          variants={fadeIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="discover-section"
-        >
-          <h3 className = "text-center mb-2">Il lato ingegnoso e crudo dell'umanità</h3>
-         
-          <div className="carousel">
-            {categorie[0].content1?.map((item) => (
-              <Link  
-                className="carousel-card"
-                  to={`/storie/${item.id}`}
-                  key={item.id}
-                >
-                  <img src = {item.img}></img>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-              </Link>
-            ))}
-          </div>
+        <AnimatedSection>
+          <ContinentsSection />
+        </AnimatedSection>
 
-          <Link to="/storie">
-            <div className = "falseButton">
-              Scopri di più
-            </div>
-          </Link>
-        </motion.section>
-
-        <motion.section
-          variants={fadeIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <section id = "continenti">
-              <h3 className = "text-center mb-2">I continenti</h3>
-              <p>Ogni continente ha le sue caratteristiche uniche e la storia non e la stessa per ogni continente, come si sono formati e quali storie hanno?</p>
-              
-              <Link to="/continents">
-                <div className = "falseButtonContinenti">
-                  Scopri di più
-                </div>
-              </Link>
-          </section>
-
-          <section className="dicover-more">
-            <h3 className = "text-center mb-5">Meraviglie e curiosità</h3>
-
-            <div className="Carousel">
-              <article className = "item_home">
-                  <h3>5.000 +</h3>
-                  <p>Anni di storia</p>
-              </article>
-              <article className = "item_home">
-                  <h3>1.000 +</h3>
-                  <p>Civiltà Esplorate</p>
-              </article>
-              <article className = "item_home">
-                  <h3>500 +</h3>
-                  <p>Invenzioni Documentate</p>
-                </article>
-                <article className = "item_home">
-                    <h3>200 +</h3>
-                    <p>Battaglie Analizzate</p>
-                </article>
-                <article className = "item_home">
-                    <h3>7.000 +</h3>
-                    <p>lingue parlate e conosciute</p>
-                </article>
-            </div>
-          </section>
-        </motion.section>
-
-        <motion.section
-          variants={fadeIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          id = "timeline"
-        >
-          <div className="timelineCarousel">
-
-            {TimeLine.map((timeline) => (
-              <div key={timeline.id} className="timelineSlide">
-
-                <h3 className = "text-center">
-                  Cosa succedeva nel mondo nel {timeline.title}?
-                </h3>
-
-                {timeline.content.map((item) => (
-                  <div 
-                    key={item.id}
-                    className="carouselTimeLine-card"
-                    style={{
-                        backgroundImage: `url(${item.img})`
-                    }}
-                  >
-                    <h4>{item.title}</h4>
-                    <p>{item.text}</p>
-                  </div>
-                ))}
-
-              </div>
-            ))}
-
-          </div>
-        </motion.section>
+        <AnimatedSection>
+          <TimelineSection />
+        </AnimatedSection>
     </>
   );
 };

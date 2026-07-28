@@ -59,7 +59,9 @@
 /*css main home for phone */
 
 .item_home {
-    flex: 0 0 28%;
+    flex: 0 0 45%;
+    height: 10rem;
+    padding: 1rem;
     scroll-snap-align: start;
     text-align: center;
     border: 1px solid #37a093;
@@ -101,6 +103,18 @@
     animation: neon 3s infinite;
 }
 
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 10px #7eebd1;
+    }
+    50% {
+        text-shadow: 0 0 40px #7eebd1;
+    }
+    100% {
+        text-shadow: 0 0 10px #7eebd1;
+    }
+}
+
 .home p{
     margin: 1rem;
 }
@@ -114,6 +128,7 @@
     border-radius: 2rem;
     padding: 0.5rem;
     box-shadow: 0px 4px 22px -2px;
+    display: block;
 }
 
 .falseButton{
@@ -122,16 +137,21 @@
     margin: 2rem auto 1rem auto;
 }
 
+.falseButtonEarth, .falseButtonNature{
+    margin: 4rem 0rem 0rem 6rem;
+    width: 50%;
+    padding: 1rem;
+    background-color: #0000009c;
+}
+
 .falseButtonEarth{
     border: solid 2px #0e7099;
     color: #2e9db2;
-    margin: 4rem 0rem 0rem 6rem;
 }
 
 .falseButtonNature{
     border: solid 2px #4a822a;
     color: #7baf48;
-    margin: 3rem 0rem 0rem 6rem;
 }
 
 .falseButtonContinenti{
@@ -165,7 +185,7 @@
     background-size: cover;
     background-position: center;
     position: relative;
-    padding: 10rem 4rem 0rem 0rem;
+    padding: 7rem 8rem 0rem 0rem;
 }
 
 #earth:after, 
@@ -334,17 +354,163 @@
     z-index: 1;
 }
 
-/*aimazione main home per telefono*/
+#group_line_time{
+    display: block;
+    margin: 3rem 0rem 2rem 0rem;
+}
 
-@keyframes neon {
-    0% {
-        text-shadow: 0 0 10px #7eebd1;
+#group_line_time div{
+    position: relative;
+    width: 100%;
+    margin: 1rem 0rem 1rem 0rem;
+    border-radius: 2rem;
+    min-height: 15rem;
+    text-align: center;
+    padding: 2rem 1rem 0rem 1rem;
+    background-position: center;
+    background-size: cover;
+}
+
+#text_earth, #text_nature{
+    width: 100%;
+} 
+
+#group_nature_earth{
+    display: block;
+}
+
+/*css main home per tablet*/
+
+@media (min-width: 426px) {
+    
+    #group_line_time{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
-    50% {
-        text-shadow: 0 0 40px #7eebd1;
+
+    #group_line_time div{
+        width: 45%;
+        margin: 1rem;
+        min-height: 15rem;
+        padding: 2rem 4rem 0rem 4rem;
     }
-    100% {
-        text-shadow: 0 0 10px #7eebd1;
+
+    #text_earth, #text_nature{
+        width: 50%;
+    } 
+
+    #text_earth, #text_nature{
+        width: 60%;
+    } 
+
+    .falseButtonEarth, .falseButtonNature{
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    .item_home {
+        flex: 0 0 30%;
+    }
+}
+
+/*css main home per laptop*/
+
+@media (min-width: 769px) {
+
+    .home {
+        min-height: 30rem;
+        padding: 4rem;
+    }
+
+    #group_nature_earth{
+        display: flex;
+    }
+    
+    #content_epoche{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+
+    #content_epoche a{
+        width: 45%;
+    }
+
+    .card_epoche img {
+        min-width: 13rem;
+        height: 12rem;
+    }
+
+    #group_nature_earth{
+        display: flex;
+    }
+
+    #earth, #nature {
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        min-height: 30rem;
+    }
+
+    #earth {
+        margin: 4rem 1rem 1rem 0rem;
+        padding: 5rem 2rem 0rem 0rem;
+        border-radius: 0rem 10rem 10rem 0rem;
+        width: 50%;
+    }
+
+    #nature {
+        margin: 4rem 0rem 1rem 1rem;
+        padding: 5rem 0rem 0rem 2rem;
+        border-radius: 10rem 0rem 0rem 10rem;
+        width: 50%;
+        text-align: end;
+    }
+
+    #text_earth, #text_nature {
+        width: 75%;
+    }
+
+    #text_nature {
+        margin-left: auto;
+    }
+
+    .falseButtonEarth, .falseButtonNature {
+        margin-top: 6rem;
+    }
+
+    #le-epoche-storiche {
+        margin: 2rem 0rem 2rem 3rem;
+    }
+
+    .item_home {
+        flex: 0 0 22%;
+    }
+}
+
+/*css main home per desktop*/
+
+@media (min-width: 1025px) {
+
+    .home {
+        min-height: 40rem;
+        padding: 8rem;
+    }
+
+    #continenti {
+        min-height: 50rem;
+        padding: 12rem 4rem 0rem 4rem;
+    }
+
+    .item_home {
+        flex: 0 0 18%;
+    }
+
+    #group_line_time div {
+        width: 30%;
+        min-height: 19rem;
     }
 }
 
