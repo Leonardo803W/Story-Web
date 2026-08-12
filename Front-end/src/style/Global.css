@@ -31,33 +31,39 @@ a{
 
 /*css per caroselli comuni*/
 
-.Carousel{
+.carousel{
     display: flex;
+    gap: 1rem;
     overflow-x: auto;
-    gap: 2rem;
     scroll-snap-type: x mandatory;
-    margin: 1rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
 }
 
-.Carousel::-webkit-scrollbar{
+.carousel::-webkit-scrollbar{
     height: 8px;
 }
 
-.Carousel::-webkit-scrollbar-track{
-    background: #eee;
+.carousel::-webkit-scrollbar-thumb{
+    background: #ecb829;
     border-radius: 20px;
 }
 
-.Carousel::-webkit-scrollbar-thumb{
-    background: #ec3029;
-    border-radius: 20px;
-}
-
-.Carousel_slide{
-    flex: 0 0 100%;
+.carousel_card{
+    flex: 0 0 250px;
     scroll-snap-align: start;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
 }
+
+.carousel_card img{
+    width: 90%;
+    height: 11rem;
+    object-fit: cover;
+    display: block;
+    border-radius: 1rem;
+}
+
 
 /*css per card comuni*/
 
@@ -70,15 +76,37 @@ a{
     overflow: hidden;
 }
 
-.card::before, #group_line_time div::before{
+/*css per background comuni*/
+
+.background::before{
     content: "";
     position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,.45);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(34 34 34 / 37%)
 }
 
-.card > *, #group_line_time div > *{
+.background > *{
     position: relative;
     z-index: 1;
     color: white;
+}
+
+/*css per button comuni*/
+
+.false_button{
+    text-align: center;
+    width: 50%;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    box-shadow: 0px 4px 22px -2px;
+    display: block;
+}
+
+.common_button{
+    border: solid 2px #b9b9b9;
+    color: #c3c3c3;
+    margin: 2rem auto 1rem auto;
 }

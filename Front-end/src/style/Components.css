@@ -58,16 +58,6 @@
 
 /*css main home for phone */
 
-.item_home {
-    flex: 0 0 45%;
-    height: 10rem;
-    padding: 1rem;
-    scroll-snap-align: start;
-    text-align: center;
-    border: 1px solid #37a093;
-    border-radius: 2rem;
-}
-
 .mainLayout{
     margin-top: 6rem;
 }
@@ -81,21 +71,6 @@
     text-align: center;
     padding: 1rem;
     color: white;
-}
-
-.home > *{
-    position: relative;
-    z-index: 1;
-}
-
-.home::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(34 34 34 / 37%)
 }
 
 .home h1 {
@@ -115,53 +90,7 @@
     }
 }
 
-.home p{
-    margin: 1rem;
-}
-
-.falseButton, 
-.falseButtonEarth, 
-.falseButtonNature, 
-.falseButtonContinenti {
-    text-align: center;
-    width: 50%;
-    border-radius: 2rem;
-    padding: 0.5rem;
-    box-shadow: 0px 4px 22px -2px;
-    display: block;
-}
-
-.falseButton{
-    border: solid 2px #b9b9b9;
-    color: #c3c3c3;
-    margin: 2rem auto 1rem auto;
-}
-
-.falseButtonEarth, .falseButtonNature{
-    margin: 4rem 0rem 0rem 6rem;
-    width: 50%;
-    padding: 1rem;
-    background-color: #0000009c;
-}
-
-.falseButtonEarth{
-    border: solid 2px #0e7099;
-    color: #2e9db2;
-}
-
-.falseButtonNature{
-    border: solid 2px #4a822a;
-    color: #7baf48;
-}
-
-.falseButtonContinenti{
-    border: solid 2px #b09a82;
-    width: 80%;
-    color: #d9b898;
-    margin: 2rem auto 0rem auto;
-}
-
-#le-epoche-storiche{
+#le_epoche_storiche{
     border-left: solid 7px #ecb829;
     padding-left: 1rem;
     margin: 2rem 0rem 2rem 1rem;
@@ -178,6 +107,10 @@
     border-radius: 1rem;
 }
 
+#group_nature_earth{
+    display: block;
+}
+
 #earth, 
 #nature{
     min-height: 25rem;
@@ -186,49 +119,8 @@
     background-position: center;
     position: relative;
     padding: 7rem 8rem 0rem 0rem;
+    overflow: hidden;
 }
-
-#earth:after, 
-#nature:after,
-#medioevo-europa::after, 
-#medioevo-asia::after,
-#medioevo-americhe::after,
-#medioevo-africa::after,
-#medioevo-oceania::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0 0 0 / 31%);
-}
-
-#continenti::after{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(
-            to bottom, rgb(0 0 0 / 0%) 0%, 
-            rgb(0 0 0 / 29%) 60%, 
-            rgb(0 0 0 / 56%) 85%, 
-            #000000 100%
-        );
-}
-
-#earth > *, 
-#nature > *,
-#continenti > *,
-#medioevo-europa > *, 
-#medioevo-asia > *,
-#medioevo-americhe > *,
-#medioevo-africa > *,
-#medioevo-oceania > *{
-    position: relative;
-    z-index: 1;
-}
-
 
 #earth{
     background-image: url('../img/earth.jpg');
@@ -242,46 +134,26 @@
     box-shadow: 0 0 5px 1px rgb(147 225 66);
 }
 
-.discover-section{
-    margin: 5rem 2rem 5rem 1rem;
+#text_earth, #text_nature{
+    width: 100%;
+} 
+
+.false_button_earth, 
+.false_button_nature{
+    margin: 4rem 0rem 0rem 6rem;
+    width: 50%;
+    padding: 1rem;
+    background-color: #0000009c;
 }
 
-.dicover-more{
-    margin: 0rem 2rem 5rem 1rem;
+.false_button_earth{
+    border: solid 2px #0e7099;
+    color: #2e9db2;
 }
 
-.carousel{
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 1rem;
-}
-
-.carousel::-webkit-scrollbar{
-    height: 8px;
-}
-
-.carousel::-webkit-scrollbar-thumb{
-    background: #ecb829;
-    border-radius: 20px;
-}
-
-
-.carousel-card{
-    flex: 0 0 250px;
-    scroll-snap-align: start;
-    position: relative;
-    border-radius: 1rem;
-    overflow: hidden;
-}
-
-.carousel-card img{
-    width: 90%;
-    height: 11rem;
-    object-fit: cover;
-    display: block;
-    border-radius: 1rem;
+.false_button_nature{
+    border: solid 2px #4a822a;
+    color: #7baf48;
 }
 
 #continenti{
@@ -293,6 +165,19 @@
     position: relative;
 }
 
+#continenti::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to bottom, rgb(0 0 0 / 0%) 0%, 
+            rgb(0 0 0 / 29%) 60%, 
+            rgb(0 0 0 / 56%) 85%, 
+            #000000 100%
+        );
+}
+
 #continenti p{
     position: relative;
     z-index: 1;
@@ -300,63 +185,31 @@
     text-align: center;
 }
 
-#timeline{
-    margin: 0rem 1rem 1rem 1rem;
+.false_button_continenti{
+    border: solid 2px #b09a82;
+    width: 80%;
+    color: #d9b898;
+    margin: 2rem auto 0rem auto;
 }
 
-.timelineCarousel{
-    display: flex;
-    overflow-x: auto;
-    gap: 2rem;
-    scroll-snap-type: x mandatory;
+.dicover-more{
+    margin: 0rem 2rem 5rem 1rem;
 }
 
-.timelineCarousel::-webkit-scrollbar{
-    height: 8px;
-}
-
-.timelineCarousel::-webkit-scrollbar-track{
-    background: #eee;
-    border-radius: 20px;
-}
-
-.timelineCarousel::-webkit-scrollbar-thumb{
-    background: #ecb829;
-    border-radius: 20px;
-}
-
-.timelineSlide{
-    flex: 0 0 100%;
+.item_home {
+    flex: 0 0 45%;
+    height: 10rem;
+    padding: 1rem;
     scroll-snap-align: start;
-}
-
-.carouselTimeLine-card{
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 14rem;
-    padding: 1rem 6rem 0 0;
-    position: relative;
-    margin: 2rem 0rem 2rem 0rem;
-    border-radius: 1rem;
-}
-
-.carouselTimeLine-card::after{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: #0000005c;
-}
-
-.carouselTimeLine-card > *{
-    position: relative;
-    z-index: 1;
+    text-align: center;
+    border: 1px solid #37a093;
+    border-radius: 2rem;
 }
 
 #group_line_time{
-    display: block;
+    flex: 0 0 100%;
     margin: 3rem 0rem 2rem 0rem;
+    scroll-snap-align: center;
 }
 
 #group_line_time div{
@@ -371,19 +224,27 @@
     background-size: cover;
 }
 
-#text_earth, #text_nature{
-    width: 100%;
-} 
+.carouselTimeLine_card{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 14rem;
+    padding: 0rem 1rem 0rem 1rem;
+    position: relative;
+    margin: 2rem 0rem 2rem 0rem;
+    border-radius: 1rem;
+}
 
-#group_nature_earth{
+.flex_timeLine{
     display: block;
 }
+
 
 /*css main home per tablet*/
 
 @media (min-width: 426px) {
     
-    #group_line_time{
+    .flex_timeLine{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -404,7 +265,7 @@
         width: 60%;
     } 
 
-    .falseButtonEarth, .falseButtonNature{
+    .false_button_earth, .false_button_nature{
         margin: auto;
         margin-top: 1rem;
     }
@@ -477,11 +338,11 @@
         margin-left: auto;
     }
 
-    .falseButtonEarth, .falseButtonNature {
+    .false_button_earth, .false_button_nature {
         margin-top: 6rem;
     }
 
-    #le-epoche-storiche {
+    #le_epoche_storiche {
         margin: 2rem 0rem 2rem 3rem;
     }
 
@@ -516,30 +377,82 @@
 
 /*css main Epoche for phone */
 
-#intro-epoche {
-    box-shadow: white 0px -10px 11px -9px;
-    margin: 1rem 0rem 5rem 0rem;
-    border-radius: 3rem 3rem 0rem 0rem;
+.title_epoche {
     text-align: center;
+    margin: 9rem 1rem 4rem 1rem;
 }
 
-.macro_epoche_card, .macro_epoche_card_active{
+.intro_epoche_sinistra, 
+.intro_epoche_destra{
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.intro_epoche_sinistra p,
+.intro_epoche_destra p{
+    line-height: 2rem;
+}
+
+.intro_epoche_destra{
+    margin: 3rem 0rem 3rem auto;
+    width: 80%;
+    box-shadow: #a5f5ff9e -4px 0px 10px 0px;
+    border-radius: 5rem 0rem 5rem 1rem;
+}
+
+.intro_epoche_sinistra{
+    margin: 3rem auto 3rem 0rem;
+    width: 80%;
+    box-shadow: #a5ffb69e 9px 0px 10px 0px;
+    border-radius: 0rem 4rem 6rem 5rem;
+}
+
+.macro_epoche {
+    margin: 3rem 0rem 3rem 0rem;
+}
+
+.macro_epoche_card, 
+.macro_epoche_card_active{
     text-align: center;
     margin: 1rem;
     border-radius: 2rem;
     background-size: cover;
+    background-position: center;
 }
 
 .macro_epoche_card{
+    opacity: 0.8;
     min-height: 5rem;
     padding: 1rem 0rem 0rem 0rem;
     animation: reduce 0.5s ease-in-out;
+}
+
+@keyframes reduce {
+    0% {
+        min-height: 12rem;
+        padding: 4rem 0rem 0rem 0rem;
+    }
+    100% {
+        min-height: 5rem;
+        padding: 1rem 0rem 0rem 0rem;
+    }
 }
 
 .macro_epoche_card_active{
     min-height: 12rem;
     padding: 4rem 0rem 0rem 0rem;
     animation: expand 0.5s ease-in-out;
+}
+
+@keyframes expand {
+    0% {
+        min-height: 5rem;
+        padding: 1rem 0rem 0rem 0rem;
+    }
+    100% {
+        min-height: 12rem;
+        padding: 4rem 0rem 0rem 0rem;
+    }
 }
 
 #card-preistoria{
@@ -576,6 +489,15 @@
     animation: subItem_epoche 2s ease-in-out;
 }
 
+@keyframes subItem_epoche {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .button_epoche {
     margin-left: 8rem;
     background-color: #3e3e3e;
@@ -583,36 +505,64 @@
     box-shadow: 0px 0px 2px white;
 }
 
-/*animazioni*/
+/*css main Epoche per tablet*/
 
-@keyframes expand {
-    0% {
-        min-height: 5rem;
-        padding: 1rem 0rem 0rem 0rem;
-    }
-    100% {
-        min-height: 12rem;
-        padding: 4rem 0rem 0rem 0rem;
-    }
-}
+@media (min-width: 426px) {
 
-@keyframes reduce {
-    0% {
-        min-height: 12rem;
-        padding: 4rem 0rem 0rem 0rem;
+    .intro_epoche_sinistra, 
+    .intro_epoche_destra {
+        padding: 2rem;
     }
-    100% {
-        min-height: 5rem;
-        padding: 1rem 0rem 0rem 0rem;
-    }
-}
 
-@keyframes subItem_epoche {
-    0% {
-        opacity: 0;
+    .macro_epoche {
+        margin: 7rem 0rem 7rem 0rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 1rem;
     }
-    100% {
-        opacity: 1;
+
+    .macro_epoche_card {
+        min-height: 20rem;
+        width: 20rem;
+        padding-top: 7rem;
+    }
+
+    .macro_epoche_card_active {
+        background-size: contain;
+        padding-top: 5rem;
+    }
+
+    .card_epoche_subitem_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .card_epoche_subitem_div{
+        width: 45%;
+    }
+
+    @keyframes reduce {
+        0% {
+            min-height: 12rem;
+            padding: 5rem;
+        }
+        100% {
+            min-height: 20rem;
+            padding: 7rem;
+        }
+    }
+
+    @keyframes expand {
+        0% {
+            min-height: 20rem;
+            padding: 7rem;
+        }
+        100% {
+            min-height: 12rem;
+            padding: 5rem;
+        }
     }
 }
 

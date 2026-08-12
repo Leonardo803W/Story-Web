@@ -1,6 +1,6 @@
 import { motion, type Variants } from "framer-motion";
 
-export function AnimatedSection({
+export function AnimationIntro({
     children,
     className,
     id
@@ -14,13 +14,11 @@ export function AnimatedSection({
         
         hidden: {
             opacity: 0,
-            y: 50,
         },
         visible: {
             opacity: 1,
-            y: 0,
             transition: {
-                duration: 2,
+                duration: 1.5,
                 ease: "easeOut",
             },
         },

@@ -10,7 +10,7 @@ type Props = {
 export function CategoryCard({ id, title, text, img }: Props) {
     return (
         <Link  
-            className="carousel-card"
+            className="carousel_card"
             to={`/storie/${id}`}
             key={id}
         >
